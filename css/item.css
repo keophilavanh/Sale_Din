@@ -1,0 +1,111 @@
+.box {
+ 
+    position: relative;
+    border: 1px solid #BBB;
+    
+  }
+  
+  .item:hover {
+      box-shadow: 3px 3px 3px #cfc9c9;
+      
+  }
+  
+  .ribbon {
+    position: absolute;
+    right: -5px; top: -5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+  }
+  .ribbon span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    width: 100px;
+    display: block;
+    background: rgb(161, 4, 4);
+    background: linear-gradient(rgb(247, 45, 72) 0%, rgb(161, 4, 4) 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 19px; right: -21px;
+  }
+  .ribbon span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid rgb(161, 4, 4);
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid rgb(161, 4, 4);
+  }
+  .ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid rgb(161, 4, 4);
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid rgb(161, 4, 4);
+  }
+
+  .remove {
+    position: absolute;
+    right: 7px; top: 5px;
+    z-index: 1;
+    overflow: hidden;
+    width: 75px; height: 75px;
+    text-align: right;
+  }
+  .remove span {
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFF;
+    /* text-transform: uppercase; */
+    text-align: center;
+    line-height: 20px;
+    /* transform: rotate(45deg); */
+    /* -webkit-transform: rotate(45deg); */
+    width: 50px;
+    display: block;
+    /* background: rgb(161, 4, 4);
+    background: linear-gradient(rgb(247, 45, 72) 0%, rgb(161, 4, 4) 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute; */
+    top: 19px; right: -15px;
+  }
+  
+  .remove span::before {
+    content: "";
+    position: absolute; left: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid rgb(161, 4, 4);
+    border-right: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid rgb(161, 4, 4);
+  }
+  .remove span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 3px solid transparent;
+    border-right: 3px solid rgb(161, 4, 4);
+    border-bottom: 3px solid transparent;
+    border-top: 3px solid rgb(161, 4, 4);
+  }
+
+
+  .multi-line-truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    
+ }
+  
+  
