@@ -148,10 +148,10 @@
             
                 if($('#Name').val() == '')  
                 {  
-                    msg('ປ້ອມຊື່ປະເພດ','en');
+                    msg('ປ້ອນຊື່ປະເພດ','Enter a category name');
                 } 
                 else if($('#Name_EN').val() == ''){
-                    msg('ປ້ອມຊື່ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ພາສາອັງກິດ','Enter an English name');
                 }
                 else  
                 {  

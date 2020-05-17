@@ -82,9 +82,9 @@
       
         $("#button_login").click(function () {
             if($("#Username").val() == '' ){
-                msg('ປ້ອມ Username','Input Username');    
+                msg('ປ້ອນ Username','Input Username');    
             } else if($("#Password").val() == '' ){
-                msg('ປ້ອມ Password','Input Password');    
+                msg('ປ້ອນ Password','Input Password');    
             }
 
             else{

@@ -139,7 +139,7 @@
                         $('#itemlist').html(data.itemlist);
                         $('#pagination').html(data.pagination);
                         if(data.total_rows == 0){
-                            msg('ບໍ່ພົບຂໍ້ມູນທີຄົ້ນຫາ','EN')
+                            msg('ບໍ່ພົບຂໍ້ມູນທີຄົ້ນຫາ','No search results found')
                         }
                        
 

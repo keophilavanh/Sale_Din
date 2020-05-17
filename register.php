@@ -34,17 +34,17 @@
                             <div class="form-group">
                                 <label >ຊື່ແທ້</label>
                                 <input type="text" class="form-control" id="name"  placeholder="Enter Name" >
-                                <small id="namehelp" class="form-text text-muted">ກະລຸນະປ້ອມຊື່ແທ້.</small>
+                                <small id="namehelp" class="form-text text-muted">ກະລຸນະປ້ອນຊື່ແທ້.</small>
                             </div>
                             <div class="form-group">
                                 <label >ນາມສະກຸນ</label>
                                 <input type="text" class="form-control" id="surname" placeholder="Enter Surname">
-                                <small id="surnamehelp" class="form-text text-muted">ກະລຸນະປ້ອມນາມສະກຸນແທ້.</small>
+                                <small id="surnamehelp" class="form-text text-muted">ກະລຸນະປ້ອນນາມສະກຸນແທ້.</small>
                             </div>
                             <div class="form-group">
                                 <label >ທີ່ຢູ່ປະຈຸດບັນ</label>
                                 <textarea  class="form-control" id="address"  placeholder="Enter Address" rows="2"></textarea>
-                                <small id="addressHelp" class="form-text text-muted">ກະລຸນະປ້ອມທີ່ຢູ່ປະຈຸດບັນ.</small>
+                                <small id="addressHelp" class="form-text text-muted">ກະລຸນະປ້ອນທີ່ຢູ່ປະຈຸດບັນ.</small>
                             </div>
                             <div class="form-group">
                                 <label >ເບີໂທລະສັບ</label>
@@ -55,7 +55,7 @@
                                         <input type="text" class="form-control " id="phone" placeholder="Enter Phone">
                                         
                                     </div>
-                                    <small id="phoneHelp" class="form-text text-muted">ກະລຸນະປ້ອມເບີໂທລະສັບ.</small>
+                                    <small id="phoneHelp" class="form-text text-muted">ກະລຸນະປ້ອນເບີໂທລະສັບ.</small>
                             </div>
                                
                             
@@ -125,35 +125,35 @@
              if($('#name').val() == '')  
             {  
                 
-                msg('ກະລຸນະປ້ອມຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','en');  
+                msg('ກະລຸນະປ້ອນຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','Please complete the information');  
             }
             else if($('#surname').val() == '')  
             {  
-                msg('ກະລຸນະປ້ອມຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','en');  
+                msg('ກະລຸນະປ້ອນຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','Please complete the information');  
             }  
             else if($('#address').val() == '')  
             {  
-                msg('ກະລຸນະປ້ອມຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','en');  
+                msg('ກະລຸນະປ້ອນຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','Please complete the information');  
             } 
             else if($('#phone').val() == '')  
             {  
-                msg('ກະລຸນະປ້ອມຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','en');  
+                msg('ກະລຸນະປ້ອນຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','Please complete the information');  
             } 
             else if($('#user').val() == '')  
             {  
-                msg('ກະລຸນະປ້ອມຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','en');   
+                msg('ກະລຸນະປ້ອນຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','Please complete the information');   
             } 
             else if($('#Password1').val() == '')  
             {  
-                msg('ກະລຸນະປ້ອມຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','en');    
+                msg('ກະລຸນະປ້ອນຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','Please complete the information');    
             }
             else if($('#Password2').val() == '')  
             {  
-                msg('ກະລຸນະປ້ອມຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','en');    
+                msg('ກະລຸນະປ້ອນຂໍ້ມູນໃຫ້ຄົບຖ້ວນ','Please complete the information');    
             }
              else if($('#Password2').val() != $('#Password1').val())  
             {  
-                msg('ຢື້ນຢັນລະຫັດຜ່ານບໍ່ຕົງກັນ','en');    
+                msg('ຢື້ນຢັນລະຫັດຜ່ານບໍ່ຕົງກັນ','Please complete the information');    
             }
             
    
@@ -176,11 +176,11 @@
                         console.log('data');
                         console.log(data);
                         if(data.status=='ok' && data.type =='Customer'){
-                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','en');
+                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','Complete the application');
                         }else if( data.status=='ok' && data.type =='Member'){
-                            msg('ລໍຖ້າທາງເວບໃຊ້ຕິດຕໍ່ຫາ','en');
+                            msg('ລໍຖ້າທາງເວບໃຊ້ຕິດຕໍ່ຫາ','Wait for the web site to contact');
                         }else if( data.status=='ok' && data.type =='VIP'){
-                            msg('ລໍຖ້າທາງເວບໃຊ້ຕິດຕໍ່ຫາ','en');
+                            msg('ລໍຖ້າທາງເວບໃຊ້ຕິດຕໍ່ຫາ','Wait for the web site to contact');
                         }
                        
                         window.setTimeout(

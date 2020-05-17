@@ -186,19 +186,19 @@
             
                 if($('#files_load').val() == ''  && $('#status').val() == 'Insert')  
                 {  
-                    msg('ເລືອກຮູບຂ່າວ','Select Image');
+                    msg('ເລືອກຮູບຂ່າວ','Select Image infomation');
                 } 
                 else if($('#titel_la').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ຂ່າວພາສາລາວ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ຂ່າວພາສາລາວ','Enter a title for the lao language');
                 }
                 else if($('#titel_en').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ຂ່າວພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ຂ່າວພາສາອັງກິດ','Enter a title for the English');
                 }
                 else if($('#description_la').val() == ''){
-                    msg('ປ້ອມລາຍລະອຽດພາສາລາວ','en');
+                    msg('ປ້ອນລາຍລະອຽດພາສາລາວ','Enter a title for the lao language');
                 }
                 else if($('#description_en').val() == ''){
-                    msg('ປ້ອມລາຍລະອຽດພາສາອັງກິດ','en');
+                    msg('ປ້ອນລາຍລະອຽດພາສາອັງກິດ','Enter a title for the English');
                 }
                 else  
                 {  

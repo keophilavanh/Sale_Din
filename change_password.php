@@ -107,11 +107,11 @@
                 }
 
                 if($('#old_Password').val()==''){
-                    msg('ປ້ອມລະຫັດເກົ່າ','Enter Old Passsword');
+                    msg('ປ້ອນລະຫັດເກົ່າ','Enter Old Passsword');
                 }else if($('#New_Password').val()==''){
-                    msg('ປ້ອມລະຫັດໃໝ່','Enter New Passsword');
+                    msg('ປ້ອນລະຫັດໃໝ່','Enter New Passsword');
                 }else if($('#Confirm_Password').val()==''){
-                    msg('ປ້ອມຢຶນຢັນລະຫັດໃໝ່','Enter Confirm Passsword');
+                    msg('ປ້ອນຢຶນຢັນລະຫັດໃໝ່','Enter Confirm Passsword');
                 }else if($('#Confirm_Password').val() != $('#New_Password').val()){
                     msg('ຢຶນຢັນລະຫັດຜ່ານ ແລະ ລະຫັດໃໝ່ບໍ່ຕົງກັນ','Confirm Passsword Invalid');
                 }else{
@@ -140,7 +140,7 @@
                                         console.log(data);
                                        
                                         if(data.status == 'ok'){
-                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','en');
+                                            msg('ສະມັກສະມາຊີກສຳເລັດ...','Complete the application form');
                                         }else{
                                             msg(data.msg,data.msg);
                                         }

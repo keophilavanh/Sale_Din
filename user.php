@@ -122,9 +122,9 @@
                                     success:function(data){  
                                        
                                         if(data.status == 'ok'){
-                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','en');
+                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','Complete the application');
                                         }else{
-                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','en');
+                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','Complete the application');
                                         }
                                         
                                         
@@ -177,9 +177,9 @@
                                     success:function(data){  
                                        
                                         if(data.status == 'ok'){
-                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','en');
+                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','Complete the application');
                                         }else{
-                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','en');
+                                            msg('ສະມັກສະມມາຊີກສຳເລັດ...','Complete the application');
                                         }
                                         
                                         

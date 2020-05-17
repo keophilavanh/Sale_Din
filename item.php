@@ -132,11 +132,11 @@
                     var vendor_id = $(this).attr("data-vendor");  
                     console.log(vendor_id);
                     if($('#text_name').val() ==''){
-                        msg('ປ້ອມຊື່ແລະນາມສະກຸນ','en');
+                        msg('ປ້ອນຊື່ແລະນາມສະກຸນ','Enter Name and Firstname');
                     }else if($('#text_phone').val() ==''){
-                        msg('ປ້ອມເບີໂທຕິດຕໍ່','en');
+                        msg('ປ້ອນເບີໂທຕິດຕໍ່','Enter Phone numbers');
                     }else if($('#text_message').val() ==''){
-                        msg('ປ້ອມຂໍ້ຄວາມ','en');
+                        msg('ປ້ອນຂໍ້ຄວາມ','Enter message');
                     }else{
 
                         var name = $('#text_name').val();

@@ -163,13 +163,13 @@
 
                 if($('#Name_System').val() == '')  
                 {  
-                    msg('ປ້ອມຊື່ເວບໄຊ','en');
+                    msg('ປ້ອນຊື່ເວບໄຊ','Enter website namwe');
                 } 
                 else if($('#Name_System_EN').val() == ''){
-                    msg('ປ້ອມຊື່ເວບໄຊພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ເວບໄຊພາສາອັງກິດ','Enter website name an English');
                 }
                 else if($('#token_bot').val() == ''){
-                    msg('ປ້ອມຊື່ເວບໄຊພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ເວບໄຊພາສາອັງກິດ','Enter website name an English');
                 }
                 else  
                 {  

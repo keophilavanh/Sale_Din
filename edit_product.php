@@ -276,7 +276,7 @@
                     xhr.open("post","php/product/upload.php"+'?pro_id='+id);
                     xhr.send(formData);
 
-                    msg('ເພີ້ມຂໍ້ມູນສຳເລັດ','en');
+                    msg('ເພີ້ມຂໍ້ມູນສຳເລັດ','Added complete');
                     setTimeout(function(){  window.location.replace('product.php'); }, 2000);
 
 
@@ -322,37 +322,37 @@
             
                 if($('#Name_LA').val() == '')  
                 {  
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາລາວ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາລາວ','Enter a title for the Lao language');
                 } 
                 else if($('#Name_EN').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
                 }
                 else if($('#Description_LA').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
                 }
                 else if($('#Description_EN').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
                 }
                 else if($('#Localtion_LA').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
                 }
                 else if($('#Localtion_EN').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
                 }
                 else if($('#category_select').val() == ''){
-                    msg('ເລືອກປະເພດ','en');
+                    msg('ເລືອກປະເພດ','Select a category');
                 }
                 // else if($('#files_load').val() == ''){
                 //     msg('ເລືອກຮູບ','en');
                 // }
                 else if($('#Price_KIP').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
                 }
                 else if($('#Price_THB').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
                 }
                 else if($('#Price_USD').val() == ''){
-                    msg('ປ້ອມຊື່ຫົວຂໍ້ພາສາອັງກິດ','en');
+                    msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
                 }
                 else  
                 {  

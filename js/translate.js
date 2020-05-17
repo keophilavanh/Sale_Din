@@ -240,7 +240,7 @@
         console.log( ' price_max',price_max);
         if(keyword == ''&& price_min == '' && price_max == ''){
             
-            msg('ບໍ່ມີຄຳຄົ້ນຫາ','EN');
+            msg('ບໍ່ມີຄຳຄົ້ນຫາ','No word for Search');
         }else{
             window.location.replace('search_page.php?keyword='+keyword+'&price_min='+price_min+'&price_max='+price_max);
         }
