@@ -14,7 +14,7 @@
 
  $columns = array('cat_id', 'Name_LA','Name_EN','status');
  //$sql = "SELECT * FROM tbl_sample ORDER BY id DESC OFFSET 0 ROWS FETCH NEXT 10 ROWS ONLY ";
- $sql = "SELECT * FROM category ";
+ $sql = "SELECT * FROM information ";
 
  
 
@@ -24,10 +24,10 @@
    
     
     
-    $sql .= ' WHERE Name_LA LIKE "%'.$_POST["search"]["value"].'%" 
-    OR Name_EN LIKE "%'.$_POST["search"]["value"].'%"
-    OR cat_id LIKE "%'.$_POST["search"]["value"].'%"
-    OR status LIKE "%'.$_POST["search"]["value"].'%"
+    $sql .= ' WHERE titel_LA LIKE "%'.$_POST["search"]["value"].'%" 
+    OR titel_EN LIKE "%'.$_POST["search"]["value"].'%"
+    OR Description_LA LIKE "%'.$_POST["search"]["value"].'%"
+    OR Description_EN LIKE "%'.$_POST["search"]["value"].'%"
    
     
     ';
@@ -41,7 +41,7 @@
 }
 else
 {
- $sql .= 'ORDER BY cat_id DESC ';
+ $sql .= 'ORDER BY id DESC ';
 }
 
 
@@ -65,19 +65,19 @@ if ($total_count > 0){
     while( $row =  mysqli_fetch_array($result)) {
     
         $sub_array = array();
-        $sub_array[] = $row["cat_id"];
-        $sub_array[] = $row["Name_LA"];
-        $sub_array[] = $row["Name_EN"];
-      
-        if($row["status"] == 'Active'){
-            $sub_array[] = '<a href="#" id="'.$row["cat_id"].'" class="btn btn-icon btn-pill btn-success " data-toggle="tooltip" >'.$row["status"].'</a>';
+        if($row["image"]){
+            $sub_array[] = '<img  src="php/information/'.$row["image"].'" alt="Smiley face" height="150" width="150" >';
         }else{
-            $sub_array[] = '<a href="#" id="'.$row["cat_id"].'" class="btn btn-icon btn-pill btn-danger " data-toggle="tooltip" > No Active </a>';
+            $sub_array[] = '<img  src="http://via.placeholder.com/150x150" alt="Smiley face" height="150" width="150" >';
         }
         
+        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["titel_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["titel_EN"] ;
+        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Description_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Description_EN"] ;
+      
+
         $sub_array[] = '
-                        <a href="#" id="'.$row["cat_id"].'" class="btn btn-pill btn-primary edit_category" data-toggle="tooltip" ><i class="fa fa-fw fa-edit"></i> '.$edit_text.' </a> 
-                        <a href="#" id="'.$row["cat_id"].'" class="btn btn-icon btn-pill btn-danger delete_category" data-toggle="tooltip" ><i class="fa fa-fw fa-trash"></i> '.$delete_text.' </a>
+                        <a href="#" id="'.$row["id"].'" class="btn btn-pill btn-primary edit_category" data-toggle="tooltip" ><i class="fa fa-fw fa-edit"></i> '.$edit_text.' </a> 
+                        <a href="#" id="'.$row["id"].'" class="btn btn-icon btn-pill btn-danger delete_category" data-toggle="tooltip" ><i class="fa fa-fw fa-trash"></i> '.$delete_text.' </a>
                         ';
        
         $data[] = $sub_array;

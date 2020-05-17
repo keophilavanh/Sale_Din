@@ -235,8 +235,17 @@
         var keyword = $('#keyword').val().split(' ').join('+');
         var price_min = $('#price_min').val();
         var price_max = $('#price_max').val();
+        console.log( ' keyword',keyword);
+        console.log( ' price_min',price_min);
+        console.log( ' price_max',price_max);
+        if(keyword == ''&& price_min == '' && price_max == ''){
+            
+            msg('ບໍ່ມີຄຳຄົ້ນຫາ','EN');
+        }else{
+            window.location.replace('search_page.php?keyword='+keyword+'&price_min='+price_min+'&price_max='+price_max);
+        }
 
-        window.location.replace('search_page.php?keyword='+keyword+'&price_min='+price_min+'&price_max='+price_max);
+        //window.location.replace('search_page.php?keyword='+keyword+'&price_min='+price_min+'&price_max='+price_max);
 
       });
 

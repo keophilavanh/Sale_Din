@@ -37,7 +37,7 @@
                 <thead>
                 <tr>
                    
-                    <th id="information_table_image" >ຮູບຂ່າວ</th>
+                    <th id="information_table_image">ຮູບຂ່າວ</th>
                     <th id="information_table_titel">ຫົວຂໍ້ຂ່າວ</th>
                     <th id="information_table_Description">ລາຍລະອຽດ</th>
                     <th>Action</th>
@@ -62,52 +62,74 @@
                     <h4 id="insert_information_titel" class="modal-title">ເພີ້ມລາຍການ</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
+                <form method="post" id="insert_form" autocomplete="off">
                     <div class="modal-body">
-                    <form method="post" id="insert_form" autocomplete="off">
-                            
+                   
+
                                 <div class="form-group row">
                                         
-                                        <div class="col-sm-7">
-                                            <label id="category_label_name" >ເບີໂທ</label>
-                                            <input type="text" class="form-control" name="Name" id="Name" >
+                                        <div class="col-sm-12">
+                                            <img id="image" src="http://via.placeholder.com/500x500" alt="Smiley face" height="250" width="500" class="form-control">
                                         </div>
                                 </div>
                                 <div class="form-group row">
                                         
-                                        <div class="col-sm-7">
-                                            <label id="category_label_name_en" >ເບີໂທ</label>
-                                            <input type="text" class="form-control" name="Name_EN" id="Name_EN" >
+                                        <div class="col-sm-12">
+                                            <label id="information_label_tetel_la" >ເລືອກຮູບ</label>
+                                            <input class="form-control" type="file" name="file" id="files_load" />
+                                        </div>
+                                </div>
+
+                                <div class="form-group row">
+                                        
+                                        <div class="col-sm-12">
+                                            <label id="information_label_tetel_la" >ຫົວຂໍ້ຂ່າວພາສາລາວ</label>
+                                            <textarea class="form-control" id="titel_la"  name="titel_la"></textarea>
+                                        </div>
+                                </div>
+                            
+                                <div class="form-group row">
+                                        
+                                        <div class="col-sm-12">
+                                            <label id="information_label_tetel_la" >ຫົວຂໍ້ຂ່າວພາສາອັງກິດ</label>
+                                            <textarea class="form-control" id="titel_en"  name="titel_en"></textarea>
+                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                        
+                                        <div class="col-sm-12">
+                                            <label id="information_label_tetel_en" >ລາຍລະອຽດພາສາລາວ</label>
+                                            <textarea class="form-control" id="description_la"  name="description_la"></textarea>
+                                        </div>
+                                </div>
+                                <div class="form-group row">
+                                        
+                                        <div class="col-sm-12">
+                                            <label id="information_label_tetel_en" >ລາຍລະອຽດພາສາອັງກິດ</label>
+                                            <textarea class="form-control" id="description_en"  name="description_en"></textarea>
                                         </div>
                                 </div>
                             
                                 <div class="form-group row">
                 
                                 
-                                    <div class="col-sm-7">
-                                        <label id="category_label_status" >ສິດ</label>
-                                        <select class="form-control"  name="Type" id="Type">
-                                            
-                                            <option value="Active">Active</option>
-                                            <option value="No Active">No Active</option>
-                                        
-                                            
-                                        </select>
-                
-                                    </div>
-                                </div>
-                            
-                                    <input type="hidden" name="cat_id" id="cat_id" />
-                                    <input type="hidden" name="status" id="status" />
-                                    <button type="submit" name="insert" id="category_save"  class="btn btn-success" >Save</button>
+                                        <div class="col-sm-12">
+                                            <input type="hidden" name="cat_id" id="cat_id" />
+                                            <input type="hidden" name="status" id="status" />
+                                         
+                                        </div>
+                                  
                                     
-
+                                </div>
                                 
 
-                                </form>
+                    
                     </div>
                     <div class="modal-footer">
+                        <button type="submit" name="insert" id="category_save"  class="btn btn-success" >Save</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
+                </form>
                 </div>
                 </div>
                 </div>
@@ -126,7 +148,7 @@
                 "serverSide":true,
                 "order":[],
                 "ajax":{
-                url:"php/category/select.php",
+                url:"php/information/select.php",
                 type:"POST"
                 }
 
@@ -137,46 +159,67 @@
                $('#add_data_Modal').modal('show');
                $('#insert').val("ເພີ້ມພະນັກງານ");
                $('#insert_form')[0].reset();
+               document.getElementById("image").src = 'http://via.placeholder.com/500x500';
                $('#status').val('Insert');
                  
            });
+
+           $("#files_load").on('change',function(){
+               try {
+                    var file_upload = document.getElementById('files_load');
+                    console.log(file_upload.files);
+                    var reader = new FileReader();
+                    reader.onload = function (e) {   
+                        document.getElementById("image").src = e.target.result;
+                    };
+                    reader.readAsDataURL(file_upload.files[0]);
+               } catch (error) {
+                    document.getElementById("image").src = 'http://via.placeholder.com/500x500';
+               }
+                
+
+            });
 
 
            $('#insert_form').on("submit", function(event){  
             event.preventDefault();  
             
-                if($('#Name').val() == '')  
+                if($('#files_load').val() == ''  && $('#status').val() == 'Insert')  
                 {  
-                    msg('ປ້ອມຊື່ປະເພດ','en');
+                    msg('ເລືອກຮູບຂ່າວ','Select Image');
                 } 
-                else if($('#Name_EN').val() == ''){
-                    msg('ປ້ອມຊື່ພາສາອັງກິດ','en');
+                else if($('#titel_la').val() == ''){
+                    msg('ປ້ອມຊື່ຫົວຂໍ້ຂ່າວພາສາລາວ','en');
+                }
+                else if($('#titel_en').val() == ''){
+                    msg('ປ້ອມຊື່ຫົວຂໍ້ຂ່າວພາສາອັງກິດ','en');
+                }
+                else if($('#description_la').val() == ''){
+                    msg('ປ້ອມລາຍລະອຽດພາສາລາວ','en');
+                }
+                else if($('#description_en').val() == ''){
+                    msg('ປ້ອມລາຍລະອຽດພາສາອັງກິດ','en');
                 }
                 else  
                 {  
 
-
+                    
+                    console.log('data');
                     $.ajax({  
-                        url:"php/category/insert_update_delete.php",  
-                        method:"POST",  
-                        data:$('#insert_form').serialize(),  
-                       
-                        beforeSend:function(){  
-                        $('#insert').val("ເພີ້ມລາຍການ");  
-                        },  
-                        dataType:"json", 
+                        url:"php/information/insert_update_delete.php",  
+                        method:"POST",
+                        data:new FormData(this),
+                        dataType:"json",  
+                        contentType:false,
+                        processData:false,
+                        
                         success:function(data){  
 
                             console.log(data);
                             if(data.status == 'ok'){
-
-                                
                                 $('#insert_form')[0].reset();  
-                               
-                               
-
+                                document.getElementById("image").src = 'http://via.placeholder.com/500x500';
                                 msg(data.msg,data.msg);
-
                             }else{
                                 msg(data.msg,data.msg);
                             }
@@ -191,25 +234,26 @@
             });
 
                 $(document).on('click', '.edit_category', function(){  
-                    var cat_id = $(this).attr("id");  
+                    var id = $(this).attr("id");  
                     
                    
                     
                     $.ajax({  
-                        url:"php/category/fetch.php",  
+                        url:"php/information/fetch.php",  
                         method:"POST",  
-                        data:{cat_id:cat_id},  
+                        data:{id:id},  
                         dataType:"json",  
                         success:function(data){
                             console.log(data);  
-                            
-                            $('#Name').val(data.Name_LA);  
-                            $('#Name_EN').val(data.Name_EN); 
-                            $('#cat_id').val(data.cat_id);  
-                            $('#Type').val(data.status);
-                        
+                            $('#cat_id').val(data.id);  
+                            $('#titel_la').val(data.titel_LA);  
+                            $('#titel_en').val(data.titel_EN); 
+                            $('#description_la').val(data.Description_LA);  
+                            $('#description_en').val(data.Description_EN);
+                            document.getElementById("image").src = 'php/information/'+data.image;
                         
                             $('#add_data_Modal').modal('show');
+                           
                             // $('#insert').val("ແກ້ໄຂຂໍ້ມູນປະເພດສິນຄ້າ");
                             $('#status').val('Update');  
                         }  
@@ -232,7 +276,7 @@
                         if (willDelete) {
 
                             $.ajax({  
-                                    url:"php/category/insert_update_delete.php",  
+                                    url:"php/information/insert_update_delete.php",  
                                     method:"POST",  
                                     data:{cat_id:cat_id,status:status},  
                                     dataType:"json",  

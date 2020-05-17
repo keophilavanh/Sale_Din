@@ -9,14 +9,23 @@ if(isset($_SESSION['token'])){
                 
                     <a href="#" id="dd_user" class="navbar-brand dropdown-toggle" data-toggle="dropdown"><i class="fas fa-user-circle fa-lg"></i> '.$_SESSION['user'].'</a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd_user">
-                        <a href="inbox.php" class="dropdown-item" id="profile" >Profile</a>
+                        <a href="message.php" class="dropdown-item" id="profile" >Profile</a>
                         <a href="#" class="dropdown-item" id="logout" onclick="logout()" >Logout</a>
                     </div>
                 </li>';
 }else{
     $account='<li class="nav-item"><a href="login.php" id="login" class="nav-link" ><i class="fas fa-user-circle"></i> Login </a></li>';
 }
-echo '<nav class="navbar navbar-expand navbar-dark bg-dark shadow">
+
+
+
+if(isset($fix)){
+    $fix="fixed-top";
+}else{
+    $fix=" ";
+}
+
+echo '<nav class="navbar navbar-expand navbar-dark bg-dark '.$fix.' shadow ">
             <a class="sidebar-toggle mr-3" href="index.php"><img id="logo" src="http://via.placeholder.com/350x150" alt="Avatar" class="avatar"></a>
             
             

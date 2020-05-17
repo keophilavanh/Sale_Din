@@ -9,7 +9,7 @@
         <div class="sidebar sidebar-dark bg-dark">
             <ul class="list-unstyled">
             
-                <li ><a href="inbox.php" id="menu_inbox"><i class="fa fa-envelope"></i> </a></li>
+                <li ><a href="message.php" id="menu_inbox"><i class="fa fa-envelope"></i> </a></li>
                 <li ><a href="product.php" id="menu_product_list"><i class="fab fa-product-hunt "></i> Product Lsit</a></li>
                 <li ><a href="information_list.php" id="menu_information"><i class="fas fa-file"></i> Information</a></li>
                 <li ><a href="category.php" id="menu_category_list"><i class="fas fa-copyright"></i> Category Lsit</a></li>

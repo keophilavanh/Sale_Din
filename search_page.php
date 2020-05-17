@@ -12,14 +12,18 @@
 
 <body class="bg-light">
 
-<?php include 'header.php'; ?>
+<?php 
+ $fix="fixed-top";
+    include 'header.php'; 
+
+?>
 
 
 <div class="d-flex">
     
    
-<?php include 'search.php'; ?>
-    <div class="content p-4 ">
+<?php //include 'search.php'; ?>
+    <div class="content p-4  mt-5">
         
    
         <div class="container">
@@ -32,6 +36,7 @@
             </div>
 
         </div>
+        <?php include 'search.php'; ?>
     </div>
 </div>
 
@@ -45,6 +50,14 @@
 <script>
 
         $(document).ready(function () {
+
+            $('#search').click(function () {
+               
+               $('#add_data_Modal').modal('show');
+               $('#insert_form')[0].reset();
+            
+                 
+           });
 
             function load_parameter(){
                 const queryString = window.location.search;

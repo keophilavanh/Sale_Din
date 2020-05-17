@@ -4,9 +4,18 @@ include_once('../conn.php');
 if(!empty($_POST))
 {
     if($_POST["status"]=='Insert'){
+       
+        $temp = explode(".", $_FILES["file"]["name"]);
+        $newfilename = round(microtime(true)) .'.'. end($temp);
+        $target_part = "img/".$newfilename;
+        move_uploaded_file($_FILES['file']['tmp_name'] , $target_part );
+
+       
+    
+
 
         $query = "INSERT INTO `information` (`titel_LA`, `titel_EN`, `Description_LA`, `Description_EN`, `image`) 
-        VALUES ( '".$_POST["titel_LA"]."','".$_POST["titel_EN"]."','".$_POST["Description_LA"]."','".$_POST["Description_EN"]."','".$_POST["image"]."')";
+        VALUES ( '".$_POST["titel_la"]."','".$_POST["titel_en"]."','".$_POST["description_la"]."','".$_POST["description_en"]."','".$target_part."')";
 
         if(mysqli_query($connect, $query)){
 
@@ -29,15 +38,42 @@ if(!empty($_POST))
     }
     else if($_POST["status"]=='Update')  
     {  
-        $query="UPDATE `category` SET  `Name_LA`='".$_POST["Name"]."',`Name_EN`='".$_POST["Name_EN"]."',`status`='".$_POST["Type"]."'
+        if($_FILES["file"]["name"]){
+            
+            $temp = explode(".", $_FILES["file"]["name"]);
+            $newfilename = round(microtime(true)) .'.'. end($temp);
+            $target_part = "img/".$newfilename;
+            move_uploaded_file($_FILES['file']['tmp_name'] , $target_part );
 
-        WHERE cat_id = '".$_POST["cat_id"]."'";  
+            $query="UPDATE `information` SET `titel_LA`='".$_POST["titel_la"]."',
+            `titel_EN`='".$_POST["titel_en"]."',
+            `Description_LA`='".$_POST["description_la"]."',
+            `Description_EN`='".$_POST["description_en"]."',
+            `image`='".$target_part."'
 
-         if(mysqli_query($connect, $query)){
+            WHERE id = '".$_POST["cat_id"]."'"; 
+
+           
+
+
+        }else{
+            $query="UPDATE `information` SET `titel_LA`='".$_POST["titel_la"]."',
+                                         `titel_EN`='".$_POST["titel_en"]."',
+                                         `Description_LA`='".$_POST["description_la"]."',
+                                         `Description_EN`='".$_POST["description_en"]."'
+                                        
+
+            WHERE id = '".$_POST["cat_id"]."'";  
+
+           
+        }
+
+        if(mysqli_query($connect, $query)){
 
             $output = array(
                 'status' => 'ok',
-                'msg' =>  'Update ສຳເລັດ...'
+                'msg' =>  'Update ສຳເລັດ...',
+               
 
                 );
             echo json_encode($output);  
@@ -51,12 +87,16 @@ if(!empty($_POST))
             echo json_encode($output);  
 
         }
+        
+        
+
+        
             
             
     }
     else if($_POST["status"]=='Delete')  
     {  
-            $query = "DELETE  FROM category WHERE cat_id = '".$_POST["cat_id"]."'";  
+            $query = "DELETE  FROM information WHERE id = '".$_POST["cat_id"]."'";  
 
             if(mysqli_query($connect, $query)){
 
