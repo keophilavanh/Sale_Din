@@ -119,7 +119,14 @@
         
         
 
-    } else {
+    } else if($_POST["localtion"]){
+
+        $where = 'WHERE 
+         product.Localtion_LA LIKE "%'.$_POST["localtion"].'%"
+         OR product.Localtion_EN LIKE "%'.$_POST["localtion"].'%" ';
+
+    }
+    else {
         $where = '';
     }
 
@@ -235,7 +242,7 @@
         'itemlist' =>   $item_list,
         //'sql' => $total_pages_sql,
         'total_rows' =>   $total_rows,
-        'pagination' => pagination($total_rows,$no_of_records_per_page,$pageno,'search_page.php?',$_POST['url_search'],$_POST['price_min'],$_POST['price_max'])
+        'pagination' => pagination($total_rows,$no_of_records_per_page,$pageno,'search_page.php?',$_POST['url_search'],$_POST['price_min'],$_POST['price_max'],$_POST['localtion'],$_POST['parent'])
        
         );
     echo json_encode($output);  

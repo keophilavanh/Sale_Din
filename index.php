@@ -22,27 +22,27 @@
 <div class="d-flex">
     
    
-<?php //include 'search.php'; ?>
+<?php include 'search.php'; ?>
     <div class="content p-4 ">
         
    
-        <div class="container mt-5">
+        <div class="container">
             <div class="row" id="itemlist">
                 
 
             </div>
             <div class="container text-center" id="pagination"> 
-                <a href="#" class="btn btn-dark btn-lg btn-square">Previous</a>
+                <!-- <a href="#" class="btn btn-dark btn-lg btn-square">Previous</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">1</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">2</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">3</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">4</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">5</a>
-                <a href="#" class="btn btn-dark btn-lg btn-square">Next</a>
+                <a href="#" class="btn btn-dark btn-lg btn-square">Next</a> -->
             </div>
 
         </div>
-        <?php include 'search.php'; ?>
+        <?php // include 'search.php'; ?>
     </div>
 </div>
 

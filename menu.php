@@ -12,6 +12,7 @@
                 <li ><a href="message.php" id="menu_inbox"><i class="fa fa-envelope"></i> </a></li>
                 <li ><a href="product.php" id="menu_product_list"><i class="fab fa-product-hunt "></i> Product Lsit</a></li>
                 <li ><a href="information_list.php" id="menu_information"><i class="fas fa-file"></i> Information</a></li>
+                <li ><a href="localtion.php" id="menu_localtion"><i class="fas fa-map-marker-alt"></i> Location </a></li>
                 <li ><a href="category.php" id="menu_category_list"><i class="fas fa-copyright"></i> Category Lsit</a></li>
                 <li ><a href="user.php" id="menu_user_active"><i class="fas fa-user"></i> User Active</a></li>
                 <li><a href="change_password.php" id="menu_change_password"> <i class="fas fa-key"></i> Change Password</a></li>
@@ -37,7 +38,7 @@
         <div class="sidebar sidebar-dark bg-dark">
             <ul class="list-unstyled">
             
-                <li ><a href="inbox.php" id="menu_inbox"><i class="fa fa-envelope"></i>  </a></li>
+                <li ><a href="message.php" id="menu_inbox"><i class="fa fa-envelope"></i>  </a></li>
                 <li ><a href="product.php" id="menu_product_list"><i class="fab fa-product-hunt "></i> Product Lsit</a></li>
                
               
@@ -55,7 +56,7 @@
         <div class="sidebar sidebar-dark bg-dark">
             <ul class="list-unstyled">
             
-                <li ><a href="inbox.php" id="menu_inbox"><i class="fa fa-envelope"></i>  </li>
+                <li ><a href="message.php" id="menu_inbox"><i class="fa fa-envelope"></i>  </li>
               
                
               

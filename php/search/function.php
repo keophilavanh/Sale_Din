@@ -4,7 +4,7 @@
  * @link: http://www.Awcore.com/dev
  */
  
-   function pagination($total, $per_page = 12,$page = 1, $url = 'search_page.php?',$keyword=0,$price_min=0,$price_max=0){        
+   function pagination($total, $per_page = 12,$page = 1, $url = 'search_page.php?',$keyword='',$price_min=0,$price_max=0,$localtion='',$parent=''){        
     	// $query = "SELECT COUNT(*) as `num` FROM {$query}";
 		// $row = mysql_fetch_array(mysql_query($query));
 		
@@ -29,6 +29,11 @@
 
 	
 		$where_search="&keyword=$keyword&price_min=$price_min&price_max=$price_max";
+
+		if($localtion){
+			$where_search.="&localtion=$localtion&parent=$parent";
+
+		}
 		
     	
     	$pagination = "";

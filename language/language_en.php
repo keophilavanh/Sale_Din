@@ -27,6 +27,7 @@
     $translate->menu_product_list = "Product List";
     $translate->menu_category_list = "Category";
     $translate->menu_information = "Information";
+    $translate->menu_localtion = "Localtion";
     $translate->menu_user_active = "User Active";
     $translate->menu_change_password = 'Change Paasword';
     $translate->menu_setting = 'Setting';
@@ -52,6 +53,22 @@
       $translate->category_save = 'Save';
       $translate->category_table_name_en = 'Name EN';
 
+      $translate->localtion_titel_card = "Provin";
+      $translate->localtion_table_code = 'Code';
+      $translate->localtion_table_name = 'Name';
+      $translate->localtion_table_status = 'City';
+      $translate->localtion_add = 'Add Provin';
+      $translate->localtion_save = 'Save';
+      $translate->localtion_table_name_en = 'Name EN';
+
+      $translate->city_titel_card = "City";
+      $translate->city_table_code = 'Code';
+      $translate->city_table_name = 'Name';
+      $translate->city_table_status = 'City';
+      $translate->city_add = 'Add City';
+      $translate->city_save = 'Save';
+      $translate->city_table_name_en = 'Name EN';
+
     //change password
 
 
@@ -68,6 +85,8 @@
     $translate->search_text = 'Keyword Search';
     $translate->price_min_text = 'Price Min';
     $translate->price_max_text = 'Price Max';
+    $translate->localtion_text = 'Localtion';
+    $translate->price_all_text = 'Price Range';
     $translate->btn_search = '<i class="fas fa-search fa-lg"></i> Search ';
 
     $translate->dashbord_message = 'MESSAGE';
@@ -118,6 +137,15 @@
     $translate->information_table_Description = "Description";
     $translate->information_save = "Save";
     $translate->information_close = "Close";
+
+    $translate->description = "Description :";
+
+    
+    $translate->contect_item = "Contect";
+    $translate->name_item = "Surname";
+    $translate->phone_item = "Phone";
+    $translate->message_item = "Message";
+    $translate->send_inbox = "<i class='fa fa-envelope'></i> Send";
     
 
 

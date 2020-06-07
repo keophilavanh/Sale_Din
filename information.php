@@ -23,13 +23,13 @@
 <div class="d-flex">
     
    
-
-    <div class="content p-4 ">
+<?php include 'search.php'; ?>
+    <div class="content p-4 mt-5">
         
         
             <div class="container mt-5">
             
-                            <h1>Information</h1><br/>
+                            <!-- <h1>Information</h1><br/> -->
                 <div class="col-sm-2"> 
             
                 </div>
@@ -82,17 +82,17 @@
 
             
             <div class="container text-center" id="pagination" style="width: 75%;"> 
-                <a href="#" class="btn btn-dark btn-lg btn-square">Previous</a>
+                <!-- <a href="#" class="btn btn-dark btn-lg btn-square">Previous</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">1</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">2</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">3</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">4</a>
                 <a href="#" class="btn btn-dark btn-lg btn-square">5</a>
-                <a href="#" class="btn btn-dark btn-lg btn-square">Next</a>
+                <a href="#" class="btn btn-dark btn-lg btn-square">Next</a> -->
             </div>
 
         </div>
-        <?php include 'search.php'; ?>
+       
     </div>
 
 
@@ -125,6 +125,16 @@
                     return 1;
                 }
             }
+
+            $(document).on('click', '.item_detell', function(){  
+               
+
+               var product_id = $(this).attr("id");  
+
+               console.log(product_id);
+               window.location.replace('information_detell.php?information_id='+product_id);
+
+           });
 
 
             

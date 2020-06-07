@@ -25,7 +25,7 @@ if(isset($fix)){
     $fix=" ";
 }
 
-echo '<nav class="navbar navbar-expand navbar-dark bg-dark '.$fix.' shadow ">
+echo '<nav class="navbar navbar-expand navbar-dark bg-success  shadow ">
             <a class="sidebar-toggle mr-3" href="index.php"><img id="logo" src="http://via.placeholder.com/350x150" alt="Avatar" class="avatar"></a>
             
             
@@ -43,8 +43,9 @@ echo '<nav class="navbar navbar-expand navbar-dark bg-dark '.$fix.' shadow ">
                         
                     </div>
             </li>
+            
             <li class="nav-item"> <a class="navbar-brand" href="information.php" id="information" >Information</a></li>
-            <li class="nav-item"><a class="navbar-brand" href="#" id="about" >About</a></li>
+            <li class="nav-item"><a class="navbar-brand" href="about.php" id="about" >About</a></li>
             
         </ul>
 
@@ -54,7 +55,7 @@ echo '<nav class="navbar navbar-expand navbar-dark bg-dark '.$fix.' shadow ">
             <li class="nav-item"><a href="#" class="nav-link sidebar-toggle" id="search" ><i class="fas fa-search fa-lg"></i> ຄົ້ນຫາ </a></li>
             <li class="nav-item"><a href="#" class="nav-link " ><img onclick="change_language()" id="img_language" src="'.$language_img.'"  height="20" width="25"></a></li>
             <!-- <li class="nav-item"><a href="#" class="nav-link" onclick="change_language_en()"><img src="https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png" alt="LAOS" height="20" width="25"></a></a></li> 
-            <li class="nav-item"><a href="inbox.php" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-success">5</span> </a></li> -->
+            <li class="nav-item"><a href="message.php" class="nav-link"><i class="fa fa-envelope"></i><span class="badge badge-success">5</span> </a></li> -->
 
             <li class="nav-item dropdown">
                 

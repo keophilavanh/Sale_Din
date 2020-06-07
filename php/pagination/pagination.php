@@ -77,11 +77,12 @@
   
             $item_list .= '  <div class="col-sm-3 p-3 item_detell" id="'.$row['id'].'">
                                 <div class=" box item " >
-                                    <div class="ribbon"></div>
+                                    <div class="ribbon"><span>'.$row['Name_EN'].'</span></div>
                                     <img class="card-img-top" src="'.$image.'" width="150" height="180" alt="Card image cap">
                                     <div class="card-body">
+                                        <p class="card-title"><i class="fas fa-eye"></i> '.$row['view'].'</p> 
                                         <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price.'</h5>
-                                        <p class="card-title"><i class="fas fa-tag"></i> '.$row['Name_EN'].'</p>
+                                        
                                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> '.$row['Localtion_EN'].'</p>
                                     
                                     </div>
@@ -102,11 +103,12 @@
 
             $item_list .= '  <div class="col-sm-3 p-3 item_detell" id="'.$row['id'].'">
                                 <div class=" box item " >
-                                    <div class="ribbon"></div>
+                                    <div class="ribbon"><span>'.$row['Name_LA'].'</span></div>
                                     <img class="card-img-top" src="'.$image.'" width="150" height="180" alt="Card image cap">
                                     <div class="card-body">
-                                        <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price.'</h5>
-                                        <p class="card-title"><i class="fas fa-tag"></i> '.$row['Name_LA'].'</p>
+                                        <p class="card-title"><i class="fas fa-eye"></i> '.$row['view'].'</p> 
+                                        <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price.'</h5> 
+                                       
                                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> '.$row['Localtion_LA'].'</p>
                                     
                                     </div>

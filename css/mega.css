@@ -1,0 +1,12 @@
+.menu-area{
+    position: static;
+}
+
+.mega-area{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px;
+
+}

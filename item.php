@@ -1,9 +1,14 @@
-
+ <?php $link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
-
+    <!-- <meta property="og:url"           content="" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content=" ຂາຍດີນລາຄາຖືກ" />
+    <meta property="og:description"   content="ລາຍລະອຽດ" />
+    <meta property="og:image"         content="http://nuengmamipoko.epizy.com/php/product/img/1590408862_1.jpeg" /> -->
+    <?php include 'php/item/meta_item.php';   ?>
     <?php include 'src.php';   ?>
 
   
@@ -12,18 +17,23 @@
 
 <body class="bg-light">
 
-<?php include 'header.php'; ?>
+<?php 
+//  $fix="fixed-top";
+    include 'header.php'; 
 
+?>
         
 
 <div class="d-flex">
     
    
 <?php include 'search.php'; ?>
-    <div class="content p-4 ">
+    <div class="content p-4 mt-5">
+
+        
         
 
-        <div class="container">
+        <div class="container mt-5">
             <div class="row" id="itemlist"  >
             <div class="col-sm-7" id="image_list">
                 
@@ -32,15 +42,15 @@
 
                            
             </div>
-            <div class="col-sm-3 bg-dark  text-light">
+            <div class="col-sm-3 bg-success  text-light">
                 <br/>
-                <h3 class="text-center"> ຊ່ອງທາງຕໍ່ເຮົາ </h3>
+                <h3 id="contect_item" class="text-center"> ຊ່ອງທາງຕໍ່ເຮົາ </h3>
                 <hr style=" border-top: 1px solid white;" /><br/>
-                <h4> ຊື່ແລະນາມສະກຸນ </h4>
+                <h4 id="name_item"> ຊື່ແລະນາມສະກຸນ </h4>
                 <input id="text_name" type="text" class="form-control"  /> <br/>
-                <h4> ເບີໂທຕິດຕໍ່ </h4>
+                <h4 id="phone_item"> ເບີໂທຕິດຕໍ່ </h4>
                 <input id="text_phone" type="text" class="form-control"  /> <br/>
-                <h4> ຂໍ້ຄວາມ </h4>
+                <h4 id="message_item"> ຂໍ້ຄວາມ </h4>
                 <textarea id="text_message" class="form-control" rows="3"  ></textarea> <br/>
                 <button type="button" id="send_inbox" class="btn btn-primary  btn-lg form-control"> <i class="fa fa-envelope"></i> ສົ່ງຂໍ້ຄວາມ</button> <br/><br/>
             </div>
@@ -52,7 +62,14 @@
             </div>
 
             <div class="col-sm-7 ">
+               
+
+                 <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v7.0"></script>
+
+                  <div class="fb-share-button" data-href="<?php echo $link; ?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnuengmamipoko.epizy.com%2Fitem.php%3Fitem_id%3D154&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">แชร์</a></div>
                 <div class="col-sm-12 bg-white  " >
+                   
                     <br/>
                     <h2 id="price">ລາຄາ : 15000000 ໂດລາ </h2><br/>
 
@@ -60,7 +77,7 @@
 
                     <h4 id="localtion"><i class="fas fa-map-marker-alt"></i> ອາພາດເມັນໃນຕົວເມືອງວຽງຈັນແຫ່ງໃໝ່ (VLC): ພັກອາໄສ, ເຮັດວຽກ ແລະ ທ່ຽວຫຼິ້ນໄດ້ທີ່ ສູນກາງທີ່ຢູ່ອາໄສ </h4><br/>
 
-                    <h4> ລາຍລະອຽດ :</h4>
+                    <h4 id="description_titel"> ລາຍລະອຽດ :</h4>
 
                     <h5 id="description" > VLC ມີທຳເລທີ່ຕັ້ງທີ່ດີທີ່ສຸດໃນເຂດທຸລະກິດໃຈກາງນະຄອນຫຼວງວຽງຈັນ, ສູນການຄ້າວຽງຈັນເຊັນເຕີ, ໃກ້ຄຽງກັບບັນດາກະຊວງ ແລະ ສະຖານທູດຕ່າງໆ. ນອກນັ້ນຍັງໃກ້ກັບຮ້ານອາຫານ, ຮ້ານບັນເທິງທີ່ມີທັງສະໄຕລລາວ ແລະ ຕ່າງປະເທດ. ລວມທັງສູນການຄ້າປາກເຊີນ, ຕະຫຼາດເຊົ້າ, ແລະ ບັນດາຮ້ານຕ່າງໆອີກຫຼາຍຮ້ອຍແຫ່ງ.
 ສະຖານທີ່ສາມາດຈັບຈອງໄດ້ທັງຄົນລາວ ແລະ ຄົນຕ່າງປະເທດໂດຍມີອາຍຸການເຊົ່າເຖິງ 70 ປີ ເຊິ່ງໝັ້ນໃຈໄດ້ເລີຍວ່າທ່ານຈະໄດ້ທຶນຄືນ 6% ຈາກການເຊົ່າພຽງແຕ່ 10 ປີ. ນັ້ນໝາຍຄວາມວ່າພາຍຫຼັງ 10 ປີທີ່ເປັນເຈົ້າຂອງແມ່ນທ່ານຈະໄດ້ຮັບທຶນຄືນ 60% ຈາກການລົງທຶນ.</h5>
@@ -80,6 +97,7 @@
             </div>
 
         </div>
+        <?php //include 'search.php'; ?>
     </div>
 </div>
 
@@ -107,6 +125,14 @@
 
             var currency =  localStorage.getItem("currency");
 
+
+            $('#search').click(function () {
+               
+               $('#add_data_Modal').modal('show');
+               $('#insert_form')[0].reset();
+            
+                 
+           });
             
             $.ajax({
                     url:"php/item/item_detell.php",
@@ -138,10 +164,12 @@
                     }else if($('#text_message').val() ==''){
                         msg('ປ້ອນຂໍ້ຄວາມ','Enter message');
                     }else{
-
+                      
                         var name = $('#text_name').val();
                         var phone = $('#text_phone').val();
                         var message = $('#text_message').val();
+
+                        console.log('text_name');
                                     $.ajax({  
                                                 url:"php/inbox/add_inbox.php",  
                                                 method:"POST",  
@@ -153,11 +181,12 @@
                                                         $('#text_phone').val('');
                                                         $('#text_message').val('');
                                                         msg(data.msg,data.msg);
+                                                      
 
                                                     }else{
                                                         msg(data.msg,data.msg);
                                                     }
-                                                    dataTable.ajax.reload();
+                                                    
                                                 }
                                             });
                     }

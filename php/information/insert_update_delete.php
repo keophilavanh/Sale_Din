@@ -14,8 +14,8 @@ if(!empty($_POST))
     
 
 
-        $query = "INSERT INTO `information` (`titel_LA`, `titel_EN`, `Description_LA`, `Description_EN`, `image`) 
-        VALUES ( '".$_POST["titel_la"]."','".$_POST["titel_en"]."','".$_POST["description_la"]."','".$_POST["description_en"]."','".$target_part."')";
+        $query = "INSERT INTO `information` (`titel_LA`, `titel_EN`, `Description_LA`, `Description_EN`, `image`,`date`) 
+        VALUES ( '".$_POST["titel_la"]."','".$_POST["titel_en"]."','".$_POST["description_la"]."','".$_POST["description_en"]."','".$target_part."','".date("Y-m-d")."')";
 
         if(mysqli_query($connect, $query)){
 

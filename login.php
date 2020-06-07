@@ -102,7 +102,7 @@
                     
                         if(data === 'true'){
                             
-                            window.location.replace('inbox.php');
+                            window.location.replace('message.php');
                         }else{
                             msg('Username ແລະ Password ບໍ່ຖືກຕ້ອງ','Username And Password invalid');
                         

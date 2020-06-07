@@ -77,6 +77,11 @@
                                             <input type="text" class="form-control" name="Name_System_EN" id="Name_System_EN" >
                                         </div>
 
+                                        <div class="col-sm-6">
+                                            <h4> Telegram chat_id</h4>
+                                            <input type="text" class="form-control" name="chat_id" id="chat_id" >
+                                        </div>
+
                                        
                                         
                                     
@@ -169,7 +174,10 @@
                     msg('ປ້ອນຊື່ເວບໄຊພາສາອັງກິດ','Enter website name an English');
                 }
                 else if($('#token_bot').val() == ''){
-                    msg('ປ້ອນຊື່ເວບໄຊພາສາອັງກິດ','Enter website name an English');
+                    msg('ປ້ອນ token_bot','Enter website token_bot');
+                }
+                else if($('#chat_id').val() == ''){
+                    msg('ປ້ອນ chat_id','Enter website chat_id');
                 }
                 else  
                 {  
@@ -187,11 +195,12 @@
                             var Name_System = $('#Name_System').val();
                             var Name_System_EN = $('#Name_System_EN').val();
                             var token_bot = $('#token_bot').val();
+                            var chat_id = $('#chat_id').val();
 
                                     $.ajax({  
                                         url:"php/update_system_name.php",  
                                         method:"POST",  
-                                        data:{Name_System:Name_System,Name_System_EN:Name_System_EN,token_bot:token_bot},  
+                                        data:{Name_System:Name_System,Name_System_EN:Name_System_EN,token_bot:token_bot,chat_id:chat_id},  
                                         dataType:"json",  
                                         success:function(data){  
 

@@ -1,11 +1,14 @@
 <?php 
-    $src = '    <link rel="stylesheet" href="css/bootstrap.min.css">
+    $src = '    
+                
+                <link rel="stylesheet" href="css/bootstrap.min.css">
                 <link rel="stylesheet" href="css/fontawesome-all.min.css">
                 <link rel="stylesheet" href="css/bootadmin.min.css">
                 <link rel="stylesheet" href="font-face/stylesheet.css">
                 <link rel="stylesheet" href="css/datatables.min.css">
                 <link rel="stylesheet" href="css/jquery.toast.css">
                 <link rel="stylesheet" href="css/item.css">
+                <link rel="stylesheet" href="css/mega.css">
                 <link rel="stylesheet" href="css/footer.css">
                 <link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
             

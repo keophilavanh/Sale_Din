@@ -22,7 +22,7 @@
 <div class="d-flex">
     
    
-<?php //include 'search.php'; ?>
+<?php include 'search.php'; ?>
     <div class="content p-4  mt-5">
         
    
@@ -36,7 +36,7 @@
             </div>
 
         </div>
-        <?php include 'search.php'; ?>
+        <?php // include 'search.php'; ?>
     </div>
 </div>
 
@@ -70,7 +70,7 @@
                 }
             }
 
-         
+            
 
             function load_keyword(){
                 const queryString = window.location.search;
@@ -80,6 +80,43 @@
                     return keyword;
                 }else{
                     return 0;
+                }
+            }
+
+            function load_localtion(){
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const keyword = urlParams.get('localtion');
+                if(keyword){
+                    return keyword;
+                }else{
+                    return '';
+                }
+            }
+
+            function load_parent(){
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const price_min = urlParams.get('parent');
+                if(price_min){
+                   
+                    load_city(price_min);
+                    
+                }else{
+                    return '';
+                }
+            }
+
+            
+            function load_parent_id(){
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const price_min = urlParams.get('parent');
+                if(price_min){
+                   
+                    return price_min;
+                }else{
+                    return '';
                 }
             }
 
@@ -122,6 +159,8 @@
                 var url_search = load_keyword();
                 var price_min = load_price_min();
                 var price_max = load_price_max();
+                var localtion = load_localtion();
+                var parent = load_parent_id();
                 var currency = localStorage.getItem("currency");
                 if(!currency){
                     currency = 'KIP';
@@ -133,7 +172,7 @@
                     url:"php/search/pagination.php",
                     method:"POST",
                     dataType:"json",
-                    data:{page:page,currency:currency,keyword:keyword,price_min:price_min,price_max:price_max,url_search:url_search},  
+                    data:{page:page,currency:currency,keyword:keyword,price_min:price_min,price_max:price_max,localtion:localtion,parent:parent,url_search:url_search},  
                     success:function(data){
                         console.log(data);
                         $('#itemlist').html(data.itemlist);
@@ -149,7 +188,7 @@
             }
 
             load_list();
-               
+            load_parent();
 
 
                 $(document).on('click', '.item_detell', function(){  

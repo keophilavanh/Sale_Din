@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 12, 2020 at 01:46 AM
+-- Generation Time: Jun 07, 2020 at 02:22 PM
 -- Server version: 5.7.26
--- PHP Version: 7.2.18
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `name` varchar(100) NOT NULL,
   `part` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `image`
@@ -88,7 +88,8 @@ INSERT INTO `image` (`id`, `pro_id`, `name`, `part`) VALUES
 (28, 146, 'img/1588488839_1.png', 'product/'),
 (29, 147, 'img/1588697265_1.jpg', 'product/'),
 (30, 147, 'img/1588697265_2.jpg', 'product/'),
-(31, 147, 'img/1588697265_3.png', 'product/');
+(31, 147, 'img/1588697265_3.png', 'product/'),
+(32, 148, 'img/1590427737_1.jpg', 'product/');
 
 -- --------------------------------------------------------
 
@@ -104,16 +105,16 @@ CREATE TABLE IF NOT EXISTS `inbox` (
   `name` varchar(50) NOT NULL,
   `user_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `inbox`
 --
 
 INSERT INTO `inbox` (`id`, `message`, `phone`, `name`, `user_id`) VALUES
-(1, 'asasdasd', '45212', 'adasd', 1),
-(2, 'asdasd', 'asdsa', 'asdsa', 1),
-(3, 'asdas', 'sadas', 'test', 7);
+(27, 'asd', 'asd', 'asd', 11),
+(26, 'asdasdasd', '56223', 'ssss', 11),
+(25, 'asdasd', '5522', 'test', 11);
 
 -- --------------------------------------------------------
 
@@ -129,8 +130,9 @@ CREATE TABLE IF NOT EXISTS `information` (
   `Description_LA` varchar(1000) NOT NULL,
   `Description_EN` varchar(1000) NOT NULL,
   `image` varchar(50) NOT NULL,
+  `date` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -154,129 +156,55 @@ CREATE TABLE IF NOT EXISTS `product` (
   `Price_USD` double NOT NULL,
   `view` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=148 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=163 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `product`
 --
 
 INSERT INTO `product` (`id`, `Name_LA`, `Name_EN`, `Description_LA`, `Description_EN`, `Localtion_LA`, `Localtion_EN`, `cat_id`, `user_id`, `Price_KIP`, `Price_THB`, `Price_USD`, `view`) VALUES
-(27, 'asdas', 'asdas', 'asd', 'asd', 'asd', 'asd', 16, 3, 0, 0, 0, 6),
-(28, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 16, 2, 5000, 5000, 5000, 1),
-(29, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 16, 2, 5000, 5000, 5000, 0),
-(30, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 18, 2, 5000, 5000, 5000, 0),
-(31, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 18, 2, 5000, 5000, 5000, 0),
-(32, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 18, 2, 5000, 5000, 5000, 0),
-(33, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 18, 2, 5000, 5000, 5000, 0),
-(34, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 1, 2, 5000, 5000, 5000, 0),
-(35, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 1, 2, 5000, 5000, 5000, 0),
-(36, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 1, 2, 5000, 5000, 5000, 0),
-(37, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 1, 2, 5000, 5000, 5000, 0),
-(38, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 1, 2, 5000, 5000, 5000, 0),
-(39, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 1, 2, 5000, 5000, 5000, 0),
-(40, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 1, 2, 5000, 5000, 5000, 0),
-(41, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(42, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(43, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(44, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(45, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(46, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(47, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(48, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(49, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(50, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(51, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(52, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(53, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(54, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(55, 'sdasd', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 2, 5000, 5000, 5000, 0),
-(56, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(57, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(58, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(59, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(60, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(61, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(62, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(63, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(64, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(65, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(66, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(67, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(68, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(69, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(70, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(71, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(72, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(73, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(74, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(75, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(76, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(77, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(78, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(79, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(80, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(81, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(82, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(83, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(84, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(85, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(86, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(87, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(88, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(89, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(90, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(91, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(92, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(93, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(94, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(95, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(96, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(97, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(98, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(99, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(100, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(101, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(102, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(103, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(104, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(105, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(106, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(107, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(108, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(109, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(110, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(111, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(112, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(113, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(114, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(115, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(116, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(117, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(118, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(119, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(120, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(121, 'sadasd', 'asdasasd', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 2, 5, 500, 5000, 5000, 0),
-(122, 'asda', 'sad', 'asdas', 'asd', 'asdas', 'asd', 18, 1, 5000, 5000, 5000, 5),
-(125, 'adsassssss', 'ssssssssssssssssss', 'ssssssssssssssssssss', 'sssssssssssssssss', 'sssssssssssssssss', 'sssssssssssssss', 18, 7, 500000, 500000, 500000, 0),
-(126, 'adsassssss', 'ssssssssssssssssss', 'ssssssssssssssssssss', 'sssssssssssssssss', 'sssssssssssssssss', 'sssssssssssssss', 18, 7, 500000, 500000, 500000, 0),
-(127, 'asdas', 'asd', 'asdas', 'asdas', 'asdasd', 'asdas', 18, 7, 222, 222, 222, 0),
-(128, 'asdasd', 'asdas', 'asdasd', 'asdas', 'asdasd', 'asdas', 18, 7, 20000, 20000, 20000, 0),
-(129, 'asdas', 'asda', 'asdas', 'asdas', 'asdas', 'asdas', 18, 7, 2000, 2000, 200, 0),
-(130, 'aasdsa', 'asdas', 'asdasd', 'asdas', 'asdas', 'asdas', 18, 7, 215, 1515, 212, 0),
-(131, 'asdsadaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaa', 'ssssssssssssssss', 'sssssssssssssssssss', 18, 7, 12, 12, 12, 0),
-(132, 'asdsadaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaa', 'ssssssssssssssss', 'sssssssssssssssssss', 18, 7, 12, 12, 12, 0),
-(133, 'asdsadaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaaaaa', 'aaaaaaaaaaaaaa', 'ssssssssssssssss', 'sssssssssssssssssss', 18, 7, 12, 12, 12, 0),
-(134, 'asdasd', 'asdas', 'asdasd', 'asdasd', 'asdsa', 'asdasd', 18, 7, 20000, 20000, 200000, 0),
-(138, 'sadcad', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 'asdas', 18, 7, 5000, 5000, 5000, 0),
-(139, 'sadasd', 'asdasd', 'sdasd', 'asdasda', 'asdasd', 'asdas', 18, 7, 5000, 50000, 52000, 0),
-(140, 'sdsadasd', 'asdas', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 16, 7, 5000, 5000, 5000, 0),
-(141, 'sdsadasd', 'asdas', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 18, 7, 5000, 5000, 5000, 0),
-(142, 'test', 'asdasd', 'asdasd', 'asdasd', 'asdasdas', 'asdasd', 18, 7, 2000, 2000, 2000, 0),
-(143, 'test2', 'sdfsad', 'asdasd', 'asdasd', 'asdasd', 'asdasd', 18, 7, 2000, 2000, 2000, 0),
-(144, 'test3', 'test', 'sadasd', 'asdasd', 'asdasd', 'asdasd', 16, 7, 2000, 2000, 2000, 0),
-(145, 'asdasd', 'asdsadas', 'sadasd', 'asdasd', 'asdasd', 'asdasdasd', 16, 7, 1522, 625, 326, 4),
-(146, 'sdsadas', 'asdasd', 'asdsad', 'asdasd', 'asdasd', 'asdasd', 18, 7, 2000, 2000, 20000, 0),
-(147, 'ຫຫັັກັຫກັຫກ', 'asdasd', 'ັຫກັຫກັຫກັຫກັຫກັ', 'asdasdas', 'ັຫກັຫກັຫກັຫກ', 'asdasdas', 16, 7, 15000000, 50000, 6000, 0);
+(161, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 52),
+(162, 'asdad', 'asdsad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 35),
+(160, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(159, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(158, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(157, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(156, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(155, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(154, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(153, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(152, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34),
+(151, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(148, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(149, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(150, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `provin`
+--
+
+DROP TABLE IF EXISTS `provin`;
+CREATE TABLE IF NOT EXISTS `provin` (
+  `provin_id` int(11) NOT NULL AUTO_INCREMENT,
+  `provin_name_la` varchar(50) NOT NULL,
+  `provin_name_en` varchar(50) NOT NULL,
+  `parent` int(11) DEFAULT NULL,
+  PRIMARY KEY (`provin_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `provin`
+--
+
+INSERT INTO `provin` (`provin_id`, `provin_name_la`, `provin_name_en`, `parent`) VALUES
+(3, 'ເມືອງສີໂຄດຕະບອງ', 'setse2555', 2),
+(2, 'ແຂວງນະຄອນຫຼວງ', 'test', NULL),
+(4, 'ເມືອງຈັນທະບູລີ', 'Chanthabouly city', 2),
+(5, 'ເມືອງສີສັດຕະນາກ', 'sesattanak city', 2),
+(6, 'ແຂວງວຽງຈັນ', 'test', NULL),
+(7, 'ແຂວງຫຼວງພະບາງ', 'หกหฟ', NULL);
 
 -- --------------------------------------------------------
 
@@ -291,6 +219,7 @@ CREATE TABLE IF NOT EXISTS `system` (
   `Name_EN` varchar(70) NOT NULL,
   `token_bot` varchar(300) DEFAULT NULL,
   `image` varchar(50) NOT NULL,
+  `chat_id` varchar(30) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -298,8 +227,8 @@ CREATE TABLE IF NOT EXISTS `system` (
 -- Dumping data for table `system`
 --
 
-INSERT INTO `system` (`id`, `Name_LA`, `Name_EN`, `token_bot`, `image`) VALUES
-(404, 'ເວບໄຊຂາຍດິນອອນລາຍ', 'Sale Online', 'asfsafergdfhdhrtd', '1587268188.png');
+INSERT INTO `system` (`id`, `Name_LA`, `Name_EN`, `token_bot`, `image`, `chat_id`) VALUES
+(404, 'ເວບໄຊຂາຍດິນອອນລາຍ', 'Sale Online', '1251355437:AAElMMZ1XR7nS2CerqCNxQp0vXeMOZR8g5E', '1587268188.png', '838018807');
 
 -- --------------------------------------------------------
 
@@ -319,7 +248,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_type` varchar(15) NOT NULL,
   `status` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
@@ -331,7 +260,8 @@ INSERT INTO `user` (`id`, `name`, `surname`, `address`, `phone`, `username`, `pa
 (8, 'test', 'test', 'setes', '777777', 'test', 'test', 'Customer', 'No Active'),
 (9, 'test', 'test', 'setes', '777777', 'test', 'test', 'Customer', 'No Active'),
 (10, 'asdasd', 'asdasd', 'asdasd', 'asdasda', 'fffff', 'fffff', 'Customer', NULL),
-(11, 'Admin', 'Admin', 'Admin', '77452952', 'Admin', '123456', 'Admin', 'Active');
+(11, 'Admin', 'Admin', 'Admin', '77452952', 'Admin', '123456', 'Admin', 'Active'),
+(12, 'test mes', 'tset mes', 'mrse', '77452952', 'test', '123456', 'Member', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

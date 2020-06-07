@@ -22,6 +22,7 @@
     $translate->menu_product_list = "ລາຍການສິນຄ້າ";
     $translate->menu_category_list = "ປະເພດລາຍການ";
     $translate->menu_information = "ຂ່າວສານ";
+    $translate->menu_localtion = "ພື້ນທີ່";
     $translate->menu_user_active = "ອະຍຸມັດ ຜູ້ໃຊ້ງານ";
     $translate->menu_change_password = 'ປ່ຽນລະຫັດຜ່ານ';
     $translate->menu_setting = 'ຕັ້ງຄ່າ';
@@ -45,6 +46,23 @@
     $translate->category_save = 'ບັນທືກ';
     $translate->category_table_name_en = 'ຊື່ພາສາອັງກິດ';
 
+    $translate->localtion_titel_card = "ຂໍ້ມູນແຂວງ";
+    $translate->localtion_table_code = 'ລະຫັດ';
+    $translate->localtion_table_name = 'ຊື່ແຂວງ';
+    $translate->localtion_table_status = 'ເມືອງ';
+    $translate->localtion_add = 'ເພີ້ມຂໍ້ມູນແຂວງ';
+    $translate->localtion_save = 'ບັນທືກ';
+    $translate->localtion_table_name_en = 'ຊື່ແຂວງພາສາອັງກິດ';
+
+    $translate->city_titel_card = "ຂໍ້ມູນເມືອງ";
+    $translate->city_table_code = 'ລະຫັດ';
+    $translate->city_table_name = 'ຊື່ເມືອງ';
+    $translate->city_table_status = 'ເມືອງ';
+    $translate->city_add = 'ເພີ້ມຂໍ້ມູນເມືອງ';
+    $translate->city_save = 'ບັນທືກ';
+    $translate->city_table_name_en = 'ຊື່ເມືອງພາສາອັງກິດ';
+    
+
     $translate->change_password_titel = 'ປ່ຽນລະຫັດຜ່ານ';
     $translate->change_password_old_Password = 'ລະຫັດເກົ່າ';
     $translate->change_password_new_Password = 'ລະຫັດໃຫມ່';
@@ -57,6 +75,8 @@
     $translate->search_text = 'ຄຳຄົ້ນຫາ';
     $translate->price_min_text = 'ລາຄາເລີ້ມຕົ້ນ';
     $translate->price_max_text = 'ລາຄາເລີ້ມສິ້ນສຸດ';
+    $translate->localtion_text = 'ພື້ນທີ່';
+    $translate->price_all_text = 'ຂອບເຂດລາຄາ';
     $translate->btn_search = '<i class="fas fa-search fa-lg"></i> ຄົ້ນຫາ ';
 
     $translate->dashbord_message = 'ຂໍຄວາມທັງໝົດ';
@@ -107,7 +127,16 @@
     $translate->information_save = "ບັນທຶກ";
     $translate->information_close = "ປິດ";
 
+    $translate->description = "ລາຍລະອຽດ :";
 
+
+    $translate->contect_item = "ຊ່ອງທາງຕໍ່ເຮົາ";
+    $translate->name_item = "ຊື່ແລະນາມສະກຸນ";
+    $translate->phone_item = "ເບີໂທຕິດຕໍ່";
+    $translate->message_item = "ຂໍ້ຄວາມ";
+    $translate->send_inbox = "<i class='fa fa-envelope'></i> ສົ່ງຂໍ້ຄວາມ";
+
+    
 
 
     

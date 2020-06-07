@@ -1,10 +1,10 @@
 
 <?php
 include_once('conn.php');
-if(!empty($_POST))
+
 {
      
-        $query="UPDATE `system` SET  `Name_LA`='".$_POST["Name_System"]."',`Name_EN`='".$_POST["Name_System_EN"]."',`token_bot`='".$_POST["token_bot"]."'
+        $query="UPDATE `system` SET  `Name_LA`='".$_POST["Name_System"]."',`Name_EN`='".$_POST["Name_System_EN"]."',`token_bot`='".$_POST["token_bot"]."' ,`chat_id`='".$_POST["chat_id"]."'
 
         WHERE id = '404'";  
 

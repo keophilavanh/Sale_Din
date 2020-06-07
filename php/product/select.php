@@ -76,9 +76,9 @@ if ($total_count > 0){
     
         $sub_array = array();
         $sub_array[] = $row["id"];
-        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Name_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Name_LA"] ;
+        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Name_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Name_EN"] ;
         $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Description_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Description_EN"] ;
-        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Localtion_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Localtion_LA"] ;
+        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Localtion_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Localtion_EN"] ;
         $sub_array[] = ''.number_format($row["Price_USD"]).' USD <br/>  '.number_format($row["Price_THB"]).' THB <br/> '.number_format($row["Price_KIP"],0).' KIP' ;
       
         // if($row["status"] == 'Active'){

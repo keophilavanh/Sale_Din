@@ -159,14 +159,18 @@
 }
 
 h1,h2,h3,h4,h5,p,button,table,a,label,select,div,strong{
-    font-family: 'segoe_uiss','Souliyo_Unicode';
-}
+    /* font-family: 'Time New Roman'; */
+     font-family: 'Time_New_Roman','phetsarath_ot_web';
+} 
+
 
 .manag{
     cursor: pointer;
 }
 
 .font_lao{
-    font-family: 'saysettha_ot';
+    font-family: 'phetsarath_ot_web';
 }
+
+.pointer {cursor: pointer;}
 

@@ -1,5 +1,6 @@
 <?php
 include_once('../conn.php');
+
 //session_start();
  //   $token = json_decode(base64_decode($_SESSION['token']));
     
@@ -20,6 +21,8 @@ if(!empty($_POST))
                 'msg' =>  'Send ສຳເລັດ...',
                
                 );
+            $string = 'ແຈ້ງເຕືອນຂໍ້ຄວາມ ຊື່ : '.$_POST["name"].'  ເບີໂທ : '.$_POST["phone"].'  ຂໍ້ຄວາມ :'.$_POST["message"];
+            include_once('../send_messange_bot_telegram.php'); 
             echo json_encode($output);  
         
         }else{
