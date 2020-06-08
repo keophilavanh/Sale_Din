@@ -7,11 +7,13 @@
     $token = json_decode(base64_decode($_SESSION['token']));
  $edit_text ='ແກ້ໄຂ';
  $delete_text ='ລົບ';
+ $message = 'ຕອບກັບ';
  if($_SESSION['language'] == 'EN'){
   
     $edit_text ='Edit';
     $delete_text ='Delete';
-
+    $message = 'Reply';
+    
   }
 
  $columns = array('id', 'Name_LA','Description_LA','Localtion_LA');
@@ -19,7 +21,7 @@
  $sql = "SELECT * FROM inbox ";
 
  if($_SESSION["user_type"] == 'Admin'){
-    $sql .="WHERE ";
+    $sql .="WHERE `user_id`= -1 AND";
   }else{
     $sql .="WHERE `user_id`=".$token->id." AND";
   }
@@ -75,6 +77,14 @@ if ($total_count > 0){
         $sub_array[] =  $row["name"];
         $sub_array[] =  $row["message"];
         $sub_array[] =  $row["phone"];
+
+        if($row["from"]){
+         $re_message = '<a href="#" id="'.$row["from"].'" class="btn btn-pill btn-primary reply" data-toggle="tooltip" ><i class="fa fa-envelope"></i> '.$message.' </a> ';
+        }else{
+         $re_message = '';
+        }
+
+        $sub_array[] = $re_message;
         
      
         $data[] = $sub_array;
@@ -84,6 +94,7 @@ if ($total_count > 0){
 else{
 
         $sub_array = array();
+        $sub_array[] = " ";
         $sub_array[] = " ";
         $sub_array[] = " ";
         $sub_array[] = " ";

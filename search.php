@@ -6,7 +6,7 @@
     
 
     $menu = '
-                <div class="sidebar sidebar-dark bg-dark toggled">
+                <div class="sidebar sidebar-dark bg-dark ">
                     <ul class="list-unstyled">
                 
                     

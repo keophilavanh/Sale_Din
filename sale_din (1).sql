@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 07, 2020 at 02:22 PM
+-- Generation Time: Jun 08, 2020 at 05:33 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.3.5
 
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `name` varchar(100) NOT NULL,
   `part` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=33 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `image`
@@ -89,7 +89,10 @@ INSERT INTO `image` (`id`, `pro_id`, `name`, `part`) VALUES
 (29, 147, 'img/1588697265_1.jpg', 'product/'),
 (30, 147, 'img/1588697265_2.jpg', 'product/'),
 (31, 147, 'img/1588697265_3.png', 'product/'),
-(32, 148, 'img/1590427737_1.jpg', 'product/');
+(32, 148, 'img/1590427737_1.jpg', 'product/'),
+(33, 162, 'img/1591628128_1.jpeg', 'product/'),
+(34, 162, 'img/1591628128_2.jpeg', 'product/'),
+(35, 162, 'img/1591628128_3.jpeg', 'product/');
 
 -- --------------------------------------------------------
 
@@ -101,20 +104,21 @@ DROP TABLE IF EXISTS `inbox`;
 CREATE TABLE IF NOT EXISTS `inbox` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `message` varchar(500) NOT NULL,
-  `phone` varchar(13) NOT NULL,
+  `phone` varchar(13) DEFAULT NULL,
   `name` varchar(50) NOT NULL,
   `user_id` int(11) NOT NULL,
+  `from` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `inbox`
 --
 
-INSERT INTO `inbox` (`id`, `message`, `phone`, `name`, `user_id`) VALUES
-(27, 'asd', 'asd', 'asd', 11),
-(26, 'asdasdasd', '56223', 'ssss', 11),
-(25, 'asdasd', '5522', 'test', 11);
+INSERT INTO `inbox` (`id`, `message`, `phone`, `name`, `user_id`, `from`) VALUES
+(40, 'asdasd', 'asdas', 'asdsad', 11, NULL),
+(39, 'sdfasdsa', '', 'Admin Admin', 11, NULL),
+(38, 'setstets', '', 'Admin Admin', -1, 11);
 
 -- --------------------------------------------------------
 
@@ -163,8 +167,8 @@ CREATE TABLE IF NOT EXISTS `product` (
 --
 
 INSERT INTO `product` (`id`, `Name_LA`, `Name_EN`, `Description_LA`, `Description_EN`, `Localtion_LA`, `Localtion_EN`, `cat_id`, `user_id`, `Price_KIP`, `Price_THB`, `Price_USD`, `view`) VALUES
-(161, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 52),
-(162, 'asdad', 'asdsad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 35),
+(161, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 85),
+(162, 'asdad', 'asdsad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 55),
 (160, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
 (159, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
 (158, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
@@ -175,7 +179,7 @@ INSERT INTO `product` (`id`, `Name_LA`, `Name_EN`, `Description_LA`, `Descriptio
 (153, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
 (152, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34),
 (151, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(148, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
+(148, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 38),
 (149, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
 (150, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34);
 
@@ -248,7 +252,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `user_type` varchar(15) NOT NULL,
   `status` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `user`
@@ -261,7 +265,8 @@ INSERT INTO `user` (`id`, `name`, `surname`, `address`, `phone`, `username`, `pa
 (9, 'test', 'test', 'setes', '777777', 'test', 'test', 'Customer', 'No Active'),
 (10, 'asdasd', 'asdasd', 'asdasd', 'asdasda', 'fffff', 'fffff', 'Customer', NULL),
 (11, 'Admin', 'Admin', 'Admin', '77452952', 'Admin', '123456', 'Admin', 'Active'),
-(12, 'test mes', 'tset mes', 'mrse', '77452952', 'test', '123456', 'Member', NULL);
+(12, 'test mes', 'tset mes', 'mrse', '77452952', 'test', '123456', 'Member', NULL),
+(13, 'test', 'sdfdsf', 'sdfsd', '555', 'test222', '123456', 'Customer', NULL);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

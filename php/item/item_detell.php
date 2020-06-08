@@ -19,15 +19,19 @@
                while( $row_image = mysqli_fetch_array($result_image)){
                     if($i == 0){
                          $sli.= '
+                              
+
                               <div class="carousel-item active">
-                                   <img class="d-block w-100 h-100" src="php/'.$row_image['part'].$row_image['name'].'" alt="First slide">
+                                   <img class="d-block w-100" src="php/'.$row_image['part'].$row_image['name'].'" alt="First slide">
                               </div>
                                    ';  
                     }else{
                          $sli.= '
-                              <div class="carousel-item ">
-                                   <img class="d-block w-100 h-100" src="php/'.$row_image['part'].$row_image['name'].'" alt="First slide">
-                              </div>
+                             
+
+                              <div class="carousel-item">
+                                  <img class="d-block w-100" src="php/'.$row_image['part'].$row_image['name'].'" alt="Second slide">
+                               </div>
                                    ';  
                     }
                     
@@ -36,19 +40,24 @@
 
       }else{
           $sli.= '
+
           <div class="carousel-item active">
-               <img class="d-block w-100 h-100" src="http://via.placeholder.com/300x300" alt="First slide">
+                    <img class="d-block w-100" src="http://via.placeholder.com/300x300" alt="First slide">
           </div>
+
+         
                ';  
       }
 
-              
+            
 
 
 
      $image_list=' <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                         <div class="carousel-inner">
-                              '.$sli.'
+                          <div class="carousel-inner">
+
+                            '.$sli.'
+
                          </div>
                          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -59,7 +68,8 @@
                               <span class="sr-only">Next</span>
                          </a>
                     </div>';
-      
+
+    
 
     
 

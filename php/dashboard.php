@@ -17,6 +17,8 @@ if($_SESSION["user_type"] == 'VIP' || $_SESSION["user_type"] == 'Member'){
     $sql_view.="WHERE `user_id`=".$token->id;
     $sql_product_total.="WHERE `user_id`=".$token->id;
     $sql_inbox.="WHERE `user_id`=".$token->id;
+}else{
+    $sql_inbox.="WHERE `user_id`= -1";
 }
 
 $product_total = mysqli_num_rows(mysqli_query($connect, $sql_product_total));

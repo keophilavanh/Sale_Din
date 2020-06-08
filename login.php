@@ -75,7 +75,7 @@
 
     </div>
 </div>
-<script type="text/javascript">
+<script >
 
     $(document).ready(function () {
 
@@ -91,27 +91,24 @@
                 var Username = $("#Username").val();
                 var Password = $("#Password").val();
                 
-                console.log('s');
+               
                 $.ajax({
-                url: "php/login.php",
-                type: 'POST',
-                data: {Username:Username,Password:Password},
-                datatype:"text",
-                    success: function(data){
-                        console.log(data);
-                    
-                        if(data === 'true'){
+                        url: "php/login.php",
+                        type: 'POST',
+                        data: {Username:Username,Password:Password},
+                        datatype:"json",
+                        success: function(data){
+                            var output = JSON.parse(data);
+                            if(output.status == 'true'){
                             
-                            window.location.replace('message.php');
-                        }else{
-                            msg('Username ແລະ Password ບໍ່ຖືກຕ້ອງ','Username And Password invalid');
-                        
-                        } 
-                    }
-                });
-                console.log('data');
-
-
+                                window.location.replace('message.php');
+                            }else{
+                                msg(output.msg,output.msg);
+                            
+                            } 
+                            
+                        }
+                    });
             }
             
 

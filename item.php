@@ -35,58 +35,69 @@
 
         <div class="container mt-5">
             <div class="row" id="itemlist"  >
-            <div class="col-sm-7" id="image_list">
-                
+                <div class="col-sm-7" >
+                    <div class="col-sm-12" id="image_list">
+
+                    
 
 
 
-                           
-            </div>
-            <div class="col-sm-3 bg-success  text-light">
-                <br/>
-                <h3 id="contect_item" class="text-center"> ຊ່ອງທາງຕໍ່ເຮົາ </h3>
-                <hr style=" border-top: 1px solid white;" /><br/>
-                <h4 id="name_item"> ຊື່ແລະນາມສະກຸນ </h4>
-                <input id="text_name" type="text" class="form-control"  /> <br/>
-                <h4 id="phone_item"> ເບີໂທຕິດຕໍ່ </h4>
-                <input id="text_phone" type="text" class="form-control"  /> <br/>
-                <h4 id="message_item"> ຂໍ້ຄວາມ </h4>
-                <textarea id="text_message" class="form-control" rows="3"  ></textarea> <br/>
-                <button type="button" id="send_inbox" class="btn btn-primary  btn-lg form-control"> <i class="fa fa-envelope"></i> ສົ່ງຂໍ້ຄວາມ</button> <br/><br/>
-            </div>
+                            
+                    </div>
+                    <div class="col-sm-12    " style="width: 100%; height: 50px;">
 
-            <div class="col-sm-12 " style="width: 100%; height: 20px;">
+                    <div id="fb-root"></div>
+                    
+                    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v7.0"></script>
 
+                    <div class="fb-share-button" data-href="<?php echo $link; ?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnuengmamipoko.epizy.com%2Fitem.php%3Fitem_id%3D154&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">แชร์</a></div>
+                    </div>
 
-
-            </div>
-
-            <div class="col-sm-7 ">
+                    <div class="col-sm-12 ">
                
 
-                 <div id="fb-root"></div>
-                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v7.0"></script>
+                       
+                        <div class="col-sm-12 bg-white  " >
+                            
+                            <br/>
+                            <h2 id="price">ລາຄາ : 15000000 ໂດລາ </h2><br/>
 
-                  <div class="fb-share-button" data-href="<?php echo $link; ?>" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fnuengmamipoko.epizy.com%2Fitem.php%3Fitem_id%3D154&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">แชร์</a></div>
-                <div class="col-sm-12 bg-white  " >
-                   
-                    <br/>
-                    <h2 id="price">ລາຄາ : 15000000 ໂດລາ </h2><br/>
+                            <h2 id="titel">ອາພາດເມັນໃນຕົວເມືອງວຽງຈັນແຫ່ງໃໝ່ (VLC): ພັກອາໄສ, ເຮັດວຽກ ແລະ ທ່ຽວຫຼິ້ນໄດ້ທີ່ ສູນກາງທີ່ຢູ່ອາໄສ </h2><br/>
 
-                    <h2 id="titel">ອາພາດເມັນໃນຕົວເມືອງວຽງຈັນແຫ່ງໃໝ່ (VLC): ພັກອາໄສ, ເຮັດວຽກ ແລະ ທ່ຽວຫຼິ້ນໄດ້ທີ່ ສູນກາງທີ່ຢູ່ອາໄສ </h2><br/>
+                            <h4 id="localtion"><i class="fas fa-map-marker-alt"></i> ອາພາດເມັນໃນຕົວເມືອງວຽງຈັນແຫ່ງໃໝ່ (VLC): ພັກອາໄສ, ເຮັດວຽກ ແລະ ທ່ຽວຫຼິ້ນໄດ້ທີ່ ສູນກາງທີ່ຢູ່ອາໄສ </h4><br/>
 
-                    <h4 id="localtion"><i class="fas fa-map-marker-alt"></i> ອາພາດເມັນໃນຕົວເມືອງວຽງຈັນແຫ່ງໃໝ່ (VLC): ພັກອາໄສ, ເຮັດວຽກ ແລະ ທ່ຽວຫຼິ້ນໄດ້ທີ່ ສູນກາງທີ່ຢູ່ອາໄສ </h4><br/>
+                            <h4 id="description_titel"> ລາຍລະອຽດ :</h4>
 
-                    <h4 id="description_titel"> ລາຍລະອຽດ :</h4>
-
-                    <h5 id="description" > VLC ມີທຳເລທີ່ຕັ້ງທີ່ດີທີ່ສຸດໃນເຂດທຸລະກິດໃຈກາງນະຄອນຫຼວງວຽງຈັນ, ສູນການຄ້າວຽງຈັນເຊັນເຕີ, ໃກ້ຄຽງກັບບັນດາກະຊວງ ແລະ ສະຖານທູດຕ່າງໆ. ນອກນັ້ນຍັງໃກ້ກັບຮ້ານອາຫານ, ຮ້ານບັນເທິງທີ່ມີທັງສະໄຕລລາວ ແລະ ຕ່າງປະເທດ. ລວມທັງສູນການຄ້າປາກເຊີນ, ຕະຫຼາດເຊົ້າ, ແລະ ບັນດາຮ້ານຕ່າງໆອີກຫຼາຍຮ້ອຍແຫ່ງ.
-ສະຖານທີ່ສາມາດຈັບຈອງໄດ້ທັງຄົນລາວ ແລະ ຄົນຕ່າງປະເທດໂດຍມີອາຍຸການເຊົ່າເຖິງ 70 ປີ ເຊິ່ງໝັ້ນໃຈໄດ້ເລີຍວ່າທ່ານຈະໄດ້ທຶນຄືນ 6% ຈາກການເຊົ່າພຽງແຕ່ 10 ປີ. ນັ້ນໝາຍຄວາມວ່າພາຍຫຼັງ 10 ປີທີ່ເປັນເຈົ້າຂອງແມ່ນທ່ານຈະໄດ້ຮັບທຶນຄືນ 60% ຈາກການລົງທຶນ.</h5>
+                            <h5 id="description" > ຈາກການລົງທຶນ.</h5>
 
 
+                        </div>
+
+                    
+                    </div>
+
+
+
+                            
+                </div>
+                <div class="col-sm-3 ">
+                    <div class="col-sm-12  bg-success  text-light">
+                        <br/>
+                        <h3 id="contect_item" class="text-center"> ຊ່ອງທາງຕໍ່ເຮົາ </h3>
+                        <hr style=" border-top: 1px solid white;" /><br/>
+                        <h4 id="name_item"> ຊື່ແລະນາມສະກຸນ </h4>
+                        <input id="text_name" type="text" class="form-control"  /> <br/>
+                        <h4 id="phone_item"> ເບີໂທຕິດຕໍ່ </h4>
+                        <input id="text_phone" type="text" class="form-control"  /> <br/>
+                        <h4 id="message_item"> ຂໍ້ຄວາມ </h4>
+                        <textarea id="text_message" class="form-control" rows="3"  ></textarea> <br/>
+                        <button type="button" id="send_inbox" class="btn btn-primary  btn-lg form-control"> <i class="fa fa-envelope"></i> ສົ່ງຂໍ້ຄວາມ</button> <br/><br/>
+                    </div>
                 </div>
 
             
-            </div>
+
+           
 
            
                 

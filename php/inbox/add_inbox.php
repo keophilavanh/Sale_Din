@@ -3,13 +3,21 @@ include_once('../conn.php');
 
 //session_start();
  //   $token = json_decode(base64_decode($_SESSION['token']));
-    
+$from;
 if(!empty($_POST))
 {
+        if(isset($_POST["user_id"])){
+            $from = $_POST["user_id"];
+            if($_POST["user_id"]==''){
+                $from = 'NULL';
+            }
+        }else{
+            $from = 'NULL';
+        }
     
        
-        $query = "INSERT INTO `inbox`(`message`, `phone`, `name`, `user_id`) 
-        VALUES ( '".$_POST["message"]."','".$_POST["phone"]."','".$_POST["name"]."','".$_POST["vendor_id"]."')";
+        $query = "INSERT INTO `inbox`(`message`, `phone`, `name`, `user_id`,`from`) 
+        VALUES ( '".$_POST["message"]."','".$_POST["phone"]."','".$_POST["name"]."','".$_POST["vendor_id"]."',".$from.")";
         
 
         if(mysqli_query($connect, $query)){
