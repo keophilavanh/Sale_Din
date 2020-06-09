@@ -21,7 +21,7 @@
  $sql = "SELECT * FROM inbox ";
 
  if($_SESSION["user_type"] == 'Admin'){
-    $sql .="WHERE (`user_id`= -1 OR `user_id`=".$token->id." )AND";
+    $sql .="WHERE (`user_id`= -1 OR `user_id`=".$token->id." ) AND";
   }else{
     $sql .="WHERE `user_id`=".$token->id." AND";
   }

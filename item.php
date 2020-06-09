@@ -91,7 +91,17 @@
                         <input id="text_phone" type="text" class="form-control"  /> <br/>
                         <h4 id="message_item"> ຂໍ້ຄວາມ </h4>
                         <textarea id="text_message" class="form-control" rows="3"  ></textarea> <br/>
-                        <button type="button" id="send_inbox" class="btn btn-primary  btn-lg form-control"> <i class="fa fa-envelope"></i> ສົ່ງຂໍ້ຄວາມ</button> <br/><br/>
+
+                        <?php 
+
+                            if(isset($_SESSION['user_type'])){
+                                echo '<button type="button" id="send_inbox" class="btn btn-primary  btn-lg form-control"> <i class="fa fa-envelope"></i> ສົ່ງຂໍ້ຄວາມ</button> <br/><br/>';
+                            }else{
+                                echo '<a href="login.php" type="button"  class="btn btn-primary  btn-lg form-control"> <i class="fa fa-envelope"></i> ສົ່ງຂໍ້ຄວາມ</a> <br/><br/>';
+                            }
+
+                        ?>
+                        
                     </div>
                 </div>
 
@@ -179,12 +189,13 @@
                         var name = $('#text_name').val();
                         var phone = $('#text_phone').val();
                         var message = $('#text_message').val();
+                        var user_id = '<?php if(isset($_SESSION['user_id'])){ echo $_SESSION['user_id']; }?>';
 
                         console.log('text_name');
                                     $.ajax({  
                                                 url:"php/inbox/add_inbox.php",  
                                                 method:"POST",  
-                                                data:{name:name,phone:phone,message:message,vendor_id:vendor_id},  
+                                                data:{name:name,phone:phone,message:message,vendor_id:vendor_id,user_id:user_id},  
                                                 dataType:"json",  
                                                 success:function(data){  
                                                     if(data.status == 'ok'){
