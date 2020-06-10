@@ -1,5 +1,38 @@
 <?php
-session_start();
+ include_once('php/conn.php');
+ session_start();
+  
+    $query = "SELECT * FROM category WHERE status = 'Active'";  
+    $result = mysqli_query($connect, $query);  
+    $output='';
+    while( $row =  mysqli_fetch_array($result)) {
+    
+          if(isset($_SESSION['language'])){
+  
+          
+
+              if($_SESSION['language'] == 'EN'){
+      
+              
+
+                $output.='<li class="nav-item"> <a href="index.php?category='.$row["cat_id"].'" class="navbar-brand" >'.$row["Name_EN"].'</a> </li> ';
+                //$output.='<option value="'.$row["cat_id"].'">'.$row["Name_EN"].'</option>';
+            
+              }else{
+                //$output.='<option value="'.$row["cat_id"].'">'.$row["Name_LA"].'</option>';
+                $output.='<li class="nav-item"> <a href="index.php?category='.$row["cat_id"].'" class="navbar-brand"  >'.$row["Name_LA"].'</a> </li>';
+              }
+        
+          }else{
+            //$output.='<option value="'.$row["cat_id"].'">'.$row["Name_LA"].'</option>';
+            $output.='<li class="nav-item"> <a href="index.php?category='.$row["cat_id"].'" class="navbar-brand"  >'.$row["Name_LA"].'</a> </li>';
+          }
+       
+        
+       
+    
+    } 
+
 $language_img= "https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png";
 if(isset($_SESSION["language_img"])){
     $language_img = $_SESSION["language_img"];
@@ -34,14 +67,7 @@ if(isset($_SESSION['token'])){
             <a class="navbar-brand" href="index.php" id="home">Home</a>
         </li>
           
-        <li class="nav-item dropdown">
-          
-              <a href="#" id="category" class="navbar-brand dropdown-toggle" data-toggle="dropdown"> Category </a>
-              <div class="dropdown-menu dropdown-menu-right" id="category_list" aria-labelledby="category_list">
-
-                  
-              </div>
-        </li>
+        '.$output.'
         <li class="nav-item"> <a class="navbar-brand" href="information.php" id="information" >Information</a></li>
         <li class="nav-item"><a class="navbar-brand" href="about.php" id="about" >About</a></li>
       </ul>

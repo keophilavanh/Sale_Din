@@ -64,6 +64,22 @@
 
                             <div class="row">
                                 <div class="col-sm-6">
+                                    <h4 id="product_text_KIP_m"> ເງີນກີບຕໍ່ແມັດ </h4>
+                                    <input type="number" class="form-control" name="KIP_m" id="KIP_m"   />
+                                       
+                                  
+                                </div>
+                                <div class="col-sm-6">
+                                    <h4 id="product_text_THB_m"> ເງີນບາດຕໍ່ແມັດ </h4>
+                                    <input type="number" class="form-control" name="THB_m" id="THB_m"   />
+                                </div>
+                            </div>
+
+                            </div>
+                            <div class="col-sm-12">
+
+                            <div class="row">
+                                <div class="col-sm-6">
                                     <h4 id="product_category"> ປະເພດ </h4>
                                     <select class="form-control" name="cat_id" id="category_select">
                                        
@@ -99,6 +115,22 @@
                                     <div class="col-sm-6">
                                         <h4 id="product_text_price_usd"> ລາຄາເປັນເງີນໂດລາ</h4>
                                         <input type="number" class="form-control" name="Price_USD" id="Price_USD"   />
+                                        
+                                    
+                                    </div>
+                                   
+                                </div>
+
+                                       
+                                  
+                                
+                            </div>
+                            <div class="col-sm-12">
+                               
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <h4 id="product_text_USD_m"> ເງີນໂດລາຕໍ່ແມັດ</h4>
+                                        <input type="number" class="form-control" name="USD_m" id="USD_m"   />
                                         
                                     
                                     </div>
@@ -248,6 +280,15 @@
                 }
                 else if($('#Price_USD').val() == ''){
                     msg('ປ້ອນຊື່ຫົວຂໍ້ພາສາອັງກິດ','Enter a title for the English');
+                }
+                else if($('#KIP_m').val() == ''){
+                    msg('ປ້ອນເງີນກີບຕໍ່ແມັດ','Enter a title for the English');
+                }
+                else if($('#THB_m').val() == ''){
+                    msg('ປ້ອນເງີນບາດຕໍ່ແມັດ','Enter a title for the English');
+                }
+                else if($('#USD_m').val() == ''){
+                    msg('ປ້ອນເງີນໂດລາຕໍ່ແມັດ','Enter a title for the English');
                 }
                 else  
                 {  

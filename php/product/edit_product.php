@@ -17,7 +17,11 @@ if(!empty($_POST))
                                         `cat_id`='".$_POST["cat_id"]."',
                                         `Price_KIP`='".$_POST["Price_KIP"]."',
                                         `Price_THB`='".$_POST["Price_THB"]."',
-                                        `Price_USD`='".$_POST["Price_USD"]."' 
+                                        `Price_USD`='".$_POST["Price_USD"]."',
+
+                                        `KIP_m`='".$_POST["KIP_m"]."',
+                                        `THB_m`='".$_POST["THB_m"]."',
+                                        `USD_m`='".$_POST["USD_m"]."' 
                                         
                                         WHERE  id = ".$_GET["product_id"];
         

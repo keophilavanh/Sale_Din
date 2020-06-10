@@ -69,10 +69,13 @@
 
             if($_POST['currency']=='KIP'){
                 $price = number_format($row['Price_KIP']).' KIP';
+                $price_to_m = number_format($row['KIP_m']).' KIP/m<sup>2</sup>';
             }else if($_POST['currency']=='THB'){
                 $price = number_format($row['Price_THB']).' THB';
+                $price_to_m = number_format($row['THB_m']).' THB/m<sup>2</sup>';
             }else{
                 $price = number_format($row['Price_USD']).' USD';
+                $price_to_m = number_format($row['USD_m']).' USD/m<sup>2</sup>';
             }
   
             $item_list .= '  <div class="col-sm-3 p-3 item_detell" id="'.$row['id'].'">
@@ -82,6 +85,7 @@
                                     <div class="card-body">
                                         <p class="card-title"><i class="fas fa-eye"></i> '.$row['view'].'</p> 
                                         <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price.'</h5>
+                                        <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price_to_m.'</h5> 
                                         
                                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> '.$row['Localtion_EN'].'</p>
                                     
@@ -95,10 +99,13 @@
 
             if($_POST['currency']=='KIP'){
                 $price = number_format($row['Price_KIP']).' ກີບ';
+                $price_to_m = number_format($row['KIP_m']).' ກີບ/ຕາແມັດ';
             }else if($_POST['currency']=='THB'){
                 $price = number_format($row['Price_THB']).' ບາດ';
+                $price_to_m = number_format($row['THB_m']).' ບາດ/ຕາແມັດ';
             }else{
                 $price = number_format($row['Price_USD']).' ໂດລາ';
+                $price_to_m = number_format($row['USD_m']).' ໂດລາ/ຕາແມັດ';
             }
 
             $item_list .= '  <div class="col-sm-3 p-3 item_detell" id="'.$row['id'].'">
@@ -107,7 +114,8 @@
                                     <img class="card-img-top" src="'.$image.'" width="150" height="180" alt="Card image cap">
                                     <div class="card-body">
                                         <p class="card-title"><i class="fas fa-eye"></i> '.$row['view'].'</p> 
-                                        <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price.'</h5> 
+                                        <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price.'</h5>
+                                        <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price_to_m.'</h5> 
                                        
                                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> '.$row['Localtion_LA'].'</p>
                                     

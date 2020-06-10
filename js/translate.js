@@ -382,7 +382,7 @@
                 // from index 
     
                 document.getElementById("home").innerHTML = language_translate.home;
-                document.getElementById("category").innerHTML = language_translate.category;
+               // document.getElementById("category").innerHTML = language_translate.category;
                 document.getElementById("information").innerHTML = language_translate.infomation;
                 document.getElementById("about").innerHTML = language_translate.about;
 
