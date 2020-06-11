@@ -142,6 +142,17 @@
                 }
             }
 
+            function load_price_to_m(){
+                const queryString = window.location.search;
+                const urlParams = new URLSearchParams(queryString);
+                const price_max = urlParams.get('price_to_m');
+                if(price_max){
+                    return price_max;
+                }else{
+                    return 0;
+                }
+            }
+
            
 
             function load_list(){
@@ -159,6 +170,7 @@
                 var url_search = load_keyword();
                 var price_min = load_price_min();
                 var price_max = load_price_max();
+                var price_to_m = load_price_to_m();
                 var localtion = load_localtion();
                 var parent = load_parent_id();
                 var currency = localStorage.getItem("currency");
@@ -172,7 +184,7 @@
                     url:"php/search/pagination.php",
                     method:"POST",
                     dataType:"json",
-                    data:{page:page,currency:currency,keyword:keyword,price_min:price_min,price_max:price_max,localtion:localtion,parent:parent,url_search:url_search},  
+                    data:{page:page,currency:currency,keyword:keyword,price_min:price_min,price_max:price_max,price_to_m:price_to_m,localtion:localtion,parent:parent,url_search:url_search},  
                     success:function(data){
                         console.log(data);
                         $('#itemlist').html(data.itemlist);

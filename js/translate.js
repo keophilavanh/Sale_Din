@@ -290,22 +290,44 @@
     function change_language() {
         //console.log('change_language');
         var language = localStorage.getItem("language");
-        if(language != 'EN' ){
+        if(language == 'EN' ){
+
+            localStorage.setItem("language", 'LAO');
+            var image = document.getElementById("img_language");
+            image.src = "https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png";
+            console.log('LAO')
+            load_language();
+           
+          
+        }else if(language == 'LAO' ){
+                localStorage.setItem("language", 'THAI');
+                var image = document.getElementById("img_language");
+                
+                image.src = "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg";
+                //console.log('EN')
+                load_language();
+           
+          
+        }
+        else if(language == 'THAI' ){
             localStorage.setItem("language", 'EN');
             var image = document.getElementById("img_language");
             
             image.src = "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg";
             //console.log('EN')
             load_language();
-           
-          
-        }else{
-            localStorage.setItem("language", 'LAO');
-            var image = document.getElementById("img_language");
-            image.src = "https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png";
-            //console.log('LAO')
-            load_language();
+       
+      
         }
+        
+        
+        // else{
+        //     localStorage.setItem("language", 'LAO');
+        //     var image = document.getElementById("img_language");
+        //     image.src = "https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png";
+        //     //console.log('LAO')
+        //     load_language();
+        // }
 
         location.reload();
       }
@@ -316,15 +338,21 @@
         var language = localStorage.getItem("language");
         if(language == 'EN' ){
          
-            var image = document.getElementById("img_language");
-            image.src = "https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png";
-            
-         
-          
-        }else{
-            
+           
             var image = document.getElementById("img_language");
             image.src = "https://upload.wikimedia.org/wikipedia/commons/5/56/Flag_of_Laos.svg";
+
+          
+        }else if(language == 'LAO'){
+            var image = document.getElementById("img_language");
+            image.src = "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg";
+        }
+        
+        else if(language == 'THAI'){
+            
+            var image = document.getElementById("img_language");
+            image.src = "https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png";
+
  
         }
       }
@@ -337,6 +365,7 @@
         var keyword = $('#keyword').val().split(' ').join('+');
         var price_min = $('#price_min').val();
         var price_max = $('#price_max').val();
+        var price_to_m = $('#price_to_m').val();
 
         var localtion;
         if(provin){
@@ -352,11 +381,11 @@
         console.log( ' keyword',keyword);
         console.log( ' price_min',price_min);
         console.log( ' price_max',price_max);
-        if(keyword == ''&& price_min == '' && price_max == ''){
+        if(keyword == ''&& price_min == '' && price_max == '' && price_to_m == ''){
             
             msg('ບໍ່ມີຄຳຄົ້ນຫາ','No word for Search');
         }else{
-             window.location.replace('search_page.php?keyword='+keyword+'&price_min='+price_min+'&price_max='+price_max+'&localtion='+localtion);
+             window.location.replace('search_page.php?keyword='+keyword+'&price_min='+price_min+'&price_max='+price_max+'&price_to_m='+price_to_m+'&localtion='+localtion);
         }
 
         //window.location.replace('search_page.php?keyword='+keyword+'&price_min='+price_min+'&price_max='+price_max);
@@ -428,6 +457,8 @@
                 try {document.getElementById("category_label_status").innerHTML = language_translate.category_table_status;}catch(err) {console.log(err.message);}
                 try {document.getElementById("category_save").innerHTML = language_translate.category_save;}catch(err) {console.log(err.message);}
                 try {document.getElementById("category_table_name_en").innerHTML = language_translate.category_table_name_en;}catch(err) {console.log(err.message);}
+                try {document.getElementById("category_table_name_thai").innerHTML = language_translate.category_table_name_thai;}catch(err) {console.log(err.message);}
+                try {document.getElementById("category_label_name_thai").innerHTML = language_translate.category_table_name_thai;}catch(err) {console.log(err.message);}
 
                 try {document.getElementById("localtion_titel_card").innerHTML = language_translate.localtion_titel_card;}catch(err) {console.log(err.message);}
                 try {document.getElementById("insert_localtion_titel").innerHTML = language_translate.localtion_titel_card;}catch(err) {console.log(err.message);}

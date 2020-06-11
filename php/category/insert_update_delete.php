@@ -5,7 +5,7 @@ if(!empty($_POST))
 {
     if($_POST["status"]=='Insert'){
 
-        $query = "INSERT INTO `category` ( `Name_LA`,`Name_EN`,`status`) VALUES ( '".$_POST["Name"]."','".$_POST["Name_EN"]."','".$_POST["Type"]."')";
+        $query = "INSERT INTO `category` ( `Name_LA`,`Name_EN`,`Name_THAI`,`status`) VALUES ( '".$_POST["Name"]."','".$_POST["Name_EN"]."','".$_POST["Name_THAI"]."','".$_POST["Type"]."')";
 
         if(mysqli_query($connect, $query)){
 
@@ -28,7 +28,7 @@ if(!empty($_POST))
     }
     else if($_POST["status"]=='Update')  
     {  
-        $query="UPDATE `category` SET  `Name_LA`='".$_POST["Name"]."',`Name_EN`='".$_POST["Name_EN"]."',`status`='".$_POST["Type"]."'
+        $query="UPDATE `category` SET  `Name_LA`='".$_POST["Name"]."',`Name_EN`='".$_POST["Name_EN"]."',`Name_THAI`='".$_POST["Name_THAI"]."',`status`='".$_POST["Type"]."'
 
         WHERE cat_id = '".$_POST["cat_id"]."'";  
 

@@ -8,8 +8,8 @@ if(!empty($_POST))
 {
     
        
-        $query = "INSERT INTO `product` (`Name_LA`, `Name_EN`, `Description_LA`, `Description_EN`, `Localtion_LA`, `Localtion_EN`, `cat_id`,`user_id`,`Price_KIP`, `Price_THB`, `Price_USD`,`view`, `USD_m`, `KIP_m`, `THB_m`) 
-        VALUES ( '".$_POST["Name_LA"]."','".$_POST["Name_EN"]."','".$_POST["Description_LA"]."','".$_POST["Description_EN"]."','".$_POST["Localtion_LA"]."','".$_POST["Localtion_EN"]."','".$_POST["cat_id"]."','".$token->id."','".$_POST["Price_KIP"]."','".$_POST["Price_THB"]."','".$_POST["Price_USD"]."',0,'".$_POST["USD_m"]."','".$_POST["KIP_m"]."','".$_POST["THB_m"]."')";
+        $query = "INSERT INTO `product` (`Name_LA`, `Name_EN`, `Description_LA`, `Description_EN`, `Localtion_LA`, `Localtion_EN`, `cat_id`,`user_id`,`Price_KIP`, `Price_THB`, `Price_USD`,`view`, `USD_m`, `KIP_m`, `THB_m`,`City_LA`, `City_EN`, `Village_LA`, `Village_EN`) 
+        VALUES ( '".$_POST["Name_LA"]."','".$_POST["Name_EN"]."','".$_POST["Description_LA"]."','".$_POST["Description_EN"]."','".$_POST["Localtion_LA"]."','".$_POST["Localtion_EN"]."','".$_POST["cat_id"]."','".$token->id."','".$_POST["Price_KIP"]."','".$_POST["Price_THB"]."','".$_POST["Price_USD"]."',0,'".$_POST["USD_m"]."','".$_POST["KIP_m"]."','".$_POST["THB_m"]."','".$_POST["City_LA"]."','".$_POST["City_EN"]."','".$_POST["Village_LA"]."','".$_POST["Village_EN"]."')";
         
 
         if(mysqli_query($connect, $query)){

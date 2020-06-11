@@ -29,7 +29,7 @@
     //     '; 
     // }
 
-    if ($_POST['keyword'] || $_POST["price_min"] > 0 || $_POST["price_max"] > 0 ) {
+    if ($_POST['keyword'] || $_POST["price_min"] > 0 || $_POST["price_max"] > 0 || $_POST["price_to_m"] > 0 ) {
 
        
 
@@ -53,6 +53,10 @@
                                 if($_POST["price_max"] > 0){
                                     $where.=' AND product.Price_KIP <= '.$_POST["price_max"].' ';
                                 }
+
+                                if($_POST["price_to_m"] > 0){
+                                    $where.=' AND product.KIP_m = '.$_POST["price_to_m"].' ';
+                                }
                         
                     
                             }else if($_POST['currency']=='THB'){
@@ -64,6 +68,10 @@
                                 if($_POST["price_max"] > 0){
                                     $where.=' AND product.Price_THB <= '.$_POST["price_max"].' ';
                                 }
+
+                                if($_POST["price_to_m"] > 0){
+                                    $where.=' AND product.THB_m = '.$_POST["price_to_m"].' ';
+                                }
                     
                             }else{
                                 
@@ -74,11 +82,17 @@
                                 if($_POST["price_max"] > 0){
                                     $where.=' AND product.Price_USD <= '.$_POST["price_max"].' ';
                                 }
+
+                                if($_POST["price_to_m"] > 0){
+                                    $where.=' AND product.USD_m = '.$_POST["price_to_m"].' ';
+                                }
                     
                     
                             }
 
-        }else{
+        }else if($_POST["price_min"] > 0 || $_POST["price_max"] > 0)
+        
+        {
 
             if($_POST['currency']=='KIP'){
               
@@ -88,6 +102,10 @@
     
                 if($_POST["price_max"] > 0){
                     $where.=' AND product.Price_KIP <= '.$_POST["price_max"].' ';
+                }
+
+                if($_POST["price_to_m"] > 0){
+                    $where.=' AND product.KIP_m = '.$_POST["price_to_m"].' ';
                 }
         
     
@@ -100,6 +118,10 @@
                 if($_POST["price_max"] > 0){
                     $where.=' AND product.Price_THB <= '.$_POST["price_max"].' ';
                 }
+
+                if($_POST["price_to_m"] > 0){
+                    $where.=' AND product.THB_m = '.$_POST["price_to_m"].' ';
+                }
     
             }else{
                 
@@ -110,10 +132,42 @@
                 if($_POST["price_max"] > 0){
                     $where.=' AND product.Price_USD <= '.$_POST["price_max"].' ';
                 }
+
+                if($_POST["price_to_m"] > 0){
+                    $where.=' AND product.USD_m = '.$_POST["price_to_m"].' ';
+                }
     
     
             }
 
+        } else {
+
+            if($_POST['currency']=='KIP'){
+              
+                
+
+                if($_POST["price_to_m"] > 0){
+                    $where.=' product.KIP_m = '.$_POST["price_to_m"].' ';
+                }
+        
+    
+            }else if($_POST['currency']=='THB'){
+    
+               
+
+                if($_POST["price_to_m"] > 0){
+                    $where.=' product.THB_m = '.$_POST["price_to_m"].' ';
+                }
+    
+            }else{
+          
+
+                if($_POST["price_to_m"] > 0){
+                    $where.=' product.USD_m = '.$_POST["price_to_m"].' ';
+                }
+    
+    
+            }
         }
        
         
@@ -123,7 +177,12 @@
 
         $where = 'WHERE 
          product.Localtion_LA LIKE "%'.$_POST["localtion"].'%"
-         OR product.Localtion_EN LIKE "%'.$_POST["localtion"].'%" ';
+         OR product.Localtion_EN LIKE "%'.$_POST["localtion"].'%" 
+         
+         product.City_LA LIKE "%'.$_POST["localtion"].'%"
+         OR product.City_EN LIKE "%'.$_POST["localtion"].'%" 
+         
+         ';
 
     }
     else {
@@ -250,7 +309,7 @@
         'itemlist' =>   $item_list,
         //'sql' => $total_pages_sql,
         'total_rows' =>   $total_rows,
-        'pagination' => pagination($total_rows,$no_of_records_per_page,$pageno,'search_page.php?',$_POST['url_search'],$_POST['price_min'],$_POST['price_max'],$_POST['localtion'],$_POST['parent'])
+        'pagination' => pagination($total_rows,$no_of_records_per_page,$pageno,'search_page.php?',$_POST['url_search'],$_POST['price_min'],$_POST['price_max'],$_POST['localtion'],$_POST['parent'],$_POST["price_to_m"])
        
         );
     echo json_encode($output);  

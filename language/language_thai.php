@@ -5,7 +5,7 @@
 
     $translate = new language;
 
-    $translate->home = "ໜ້າຫຼັກ";
+    $translate->home = "หน้าหลัก";
     $translate->category = "ປະເພດ";
     $translate->infomation = "ຂ່າວສານ";
     $translate->about = "ກ່ຽວກັບ";

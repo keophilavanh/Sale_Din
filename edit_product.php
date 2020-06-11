@@ -40,10 +40,25 @@
                                 <h4 id="product_text_description_la"> ລາຍລະອຽດ </h4>
                                 <textarea class="form-control" id="Description_LA" rows="3" name="Description_LA" ></textarea>
                             </div><br/>
-                            <div class="col-sm-12">
-                                <h4 id="product_text_localtion_la"> ທີ່ຕັ້ງຂອງດິນ </h4>
-                                <textarea class="form-control" id="Localtion_LA" name="Localtion_LA" rows="2"></textarea>
+                            <div class="col-sm-12 row">
+                                <div class="col-sm-4">
+                                    <h4 id="product_text_provin_la"> ແຂວງ </h4>
+                                    <input type="text" class="form-control" id="Localtion_LA" name="Localtion_LA"  >
+                               
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4 id="product_text_city_la"> ເມືອງ </h4>
+                                    <input type="text" class="form-control" id="City_LA" name="City_LA"  >
+                               
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4 id="product_text_village_la"> ບ້ານ </h4>
+                                    <input type="text" class="form-control" id="Village_LA" name="Village_LA"  >
+                               
+                                </div>
                             </div><br/>
+
+
                             <div class="col-sm-12">
 
                             <div class="row">
@@ -106,9 +121,22 @@
                                 <h4 id="product_text_discription_en" > ລາຍລະອຽດພາສາອັງກິດ </h4>
                                 <textarea class="form-control" id="Description_EN" name="Description_EN" rows="3"></textarea>
                             </div><br/>
-                            <div class="col-sm-12">
-                                <h4 id="product_text_localtion_en"> ທີ່ຕັ້ງຂອງດິນ </h4>
-                                <textarea class="form-control" id="Localtion_EN" name="Localtion_EN" rows="2"></textarea>
+                            <div class="col-sm-12 row">
+                                <div class="col-sm-4">
+                                    <h4 id="product_text_provin_en"> ແຂວງພາສາອັງກິດ </h4>
+                                    <input type="text" class="form-control" id="Localtion_EN" name="Localtion_EN" >
+                               
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4 id="product_text_city_en"> ເມືອງພາສາອັງກິດ </h4>
+                                    <input type="text" class="form-control" id="City_EN" name="City_EN"  >
+                               
+                                </div>
+                                <div class="col-sm-4">
+                                    <h4 id="product_text_village_en"> ບ້ານພາສາອັງກິດ </h4>
+                                    <input type="text" class="form-control" id="Village_EN" name="Village_EN"  >
+                               
+                                </div>
                             </div><br/>
                             <div class="col-sm-12">
                                
@@ -231,6 +259,11 @@
                         $('#Description_EN').val(data.Description_EN);
                         $('#Localtion_LA').val(data.Localtion_LA);
                         $('#Localtion_EN').val(data.Localtion_EN);
+
+                        $('#City_LA').val(data.City_LA);
+                        $('#City_EN').val(data.City_EN);
+                        $('#Village_LA').val(data.Village_LA);
+                        $('#Village_EN').val(data.Village_EN);
 
                         $('#category_select').val(data.cat_id); 
 

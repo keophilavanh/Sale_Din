@@ -40,6 +40,7 @@
                     <th id="category_table_code" >ລະຫັດ</th>
                     <th id="category_table_name">ຊື່ປະເພດທີດິນ</th>
                     <th id="category_table_name_en">ຊື່ພາສາອັງກິດ</th>
+                    <th id="category_table_name_thai">ຊື່ພາສາໄທ</th>
                     <th id="category_table_status" >ສະຖານະ</th>
                     <th>Action</th>
                 </tr>
@@ -78,6 +79,14 @@
                                         <div class="col-sm-7">
                                             <label id="category_label_name_en" >ເບີໂທ</label>
                                             <input type="text" class="form-control" name="Name_EN" id="Name_EN" >
+                                        </div>
+                                </div>
+
+                                <div class="form-group row">
+                                        
+                                        <div class="col-sm-7">
+                                            <label id="category_label_name_thai" >ເບີໂທ</label>
+                                            <input type="text" class="form-control" name="Name_THAI" id="Name_THAI" >
                                         </div>
                                 </div>
                             
@@ -153,6 +162,9 @@
                 else if($('#Name_EN').val() == ''){
                     msg('ປ້ອນຊື່ພາສາອັງກິດ','Enter an English name');
                 }
+                else if($('#Name_THAI').val() == ''){
+                    msg('ປ້ອນຊື່ພາສາໄທ','Enter an thai name');
+                }
                 else  
                 {  
 
@@ -206,6 +218,7 @@
                             
                             $('#Name').val(data.Name_LA);  
                             $('#Name_EN').val(data.Name_EN); 
+                            $('#Name_THAI').val(data.Name_THAI); 
                             $('#cat_id').val(data.cat_id);  
                             $('#Type').val(data.status);
                         

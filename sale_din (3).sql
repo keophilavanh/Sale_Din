@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 11, 2020 at 05:00 AM
+-- Generation Time: Jun 11, 2020 at 05:09 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -33,17 +33,19 @@ CREATE TABLE IF NOT EXISTS `category` (
   `cat_id` int(11) NOT NULL AUTO_INCREMENT,
   `Name_LA` varchar(50) NOT NULL,
   `Name_EN` varchar(50) NOT NULL,
+  `Name_THAI` varchar(50) NOT NULL,
   `status` varchar(15) NOT NULL,
   PRIMARY KEY (`cat_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`cat_id`, `Name_LA`, `Name_EN`, `status`) VALUES
-(18, 'ດີນປຸກສ້າງ', 'asd', 'Active'),
-(16, 'ດີນຈັດສັນ', 'en', 'Active');
+INSERT INTO `category` (`cat_id`, `Name_LA`, `Name_EN`, `Name_THAI`, `status`) VALUES
+(18, 'ດີນປຸກສ້າງ', 'asd', 'ພາສາໄທ', 'Active'),
+(16, 'ດີນຈັດສັນ', 'en', 'ພາສາໄທ', 'Active'),
+(19, 'ດີນເປົ່າວ່າງ', 'asdasd', 'ພາສາໄທ', 'Active');
 
 -- --------------------------------------------------------
 
@@ -58,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `name` varchar(100) NOT NULL,
   `part` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `image`
@@ -93,7 +95,9 @@ INSERT INTO `image` (`id`, `pro_id`, `name`, `part`) VALUES
 (33, 162, 'img/1591628128_1.jpeg', 'product/'),
 (34, 162, 'img/1591628128_2.jpeg', 'product/'),
 (35, 162, 'img/1591628128_3.jpeg', 'product/'),
-(36, 163, 'img/1591802207_1.jpg', 'product/');
+(36, 163, 'img/1591802207_1.jpg', 'product/'),
+(37, 157, 'img/1591857753_1.jpg', 'product/'),
+(38, 165, 'img/1591894501_1.jpg', 'product/');
 
 -- --------------------------------------------------------
 
@@ -167,30 +171,36 @@ CREATE TABLE IF NOT EXISTS `product` (
   `USD_m` double NOT NULL,
   `KIP_m` double NOT NULL,
   `THB_m` double NOT NULL,
+  `City_LA` varchar(50) NOT NULL,
+  `City_EN` varchar(50) NOT NULL,
+  `Village_LA` varchar(50) NOT NULL,
+  `Village_EN` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=164 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=166 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `Name_LA`, `Name_EN`, `Description_LA`, `Description_EN`, `Localtion_LA`, `Localtion_EN`, `cat_id`, `user_id`, `Price_KIP`, `Price_THB`, `Price_USD`, `view`, `USD_m`, `KIP_m`, `THB_m`) VALUES
-(161, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 91, 0, 0, 0),
-(162, 'asdad', 'asdsad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 55, 0, 0, 0),
-(160, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 300, 150000, 2000),
-(159, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(158, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(157, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(156, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(155, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(154, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(153, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(152, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(151, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(148, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 38, 0, 0, 0),
-(149, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(150, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
-(163, 'seesef', 'sdfsdfsd', 'sdfsdfsdf', 'sdfsdfsd', 'sdfsdfsdf', 'sdfsdfsdfsd', 18, 11, 150000000, 5200000, 600000, 0, 300, 1500000, 5000);
+INSERT INTO `product` (`id`, `Name_LA`, `Name_EN`, `Description_LA`, `Description_EN`, `Localtion_LA`, `Localtion_EN`, `cat_id`, `user_id`, `Price_KIP`, `Price_THB`, `Price_USD`, `view`, `USD_m`, `KIP_m`, `THB_m`, `City_LA`, `City_EN`, `Village_LA`, `Village_EN`) VALUES
+(161, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 92, 0, 150000, 0, '', '', '', ''),
+(162, 'asdad', 'asdsad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 56, 0, 150000, 0, '', '', '', ''),
+(160, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 16, 11, 13, 55, 555, 34, 300, 150000, 2000, '', '', '', ''),
+(159, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(158, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(157, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 12, 55, 555, 35, 0, 150000, 0, '', '', '', ''),
+(156, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(155, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(154, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(153, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 10, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(152, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(151, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(148, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 38, 0, 150000, 0, '', '', '', ''),
+(149, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(150, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34, 0, 150000, 0, '', '', '', ''),
+(163, 'seesef', 'sdfsdfsd', 'sdfsdfsdf', 'sdfsdfsd', 'sdfsdfsdf', 'sdfsdfsdfsd', 18, 11, 150000000, 5200000, 600000, 0, 300, 1500000, 5000, '', '', '', ''),
+(164, 'asdasd', 'asdasd', 'asdasd', 'asdasd', 'ແຂວງນະຄອນຫວງ', 'asdasd', 18, 11, 150000, 15000, 150000, 0, 30, 150, 50, 'ເມືອງສີສັດຕະນາກ', 'asdasdas', '', 'asdasd'),
+(165, 'asdasd', 'asdasdas', 'asdasd', 'assdasd', 'ແຂວງນະຄອນຫຼວງວຽງຈັນ', 'asdasdas', 18, 11, 150000, 150000, 152000, 0, 150, 1500000, 3000, 'ເມືອງຈັນທະບູລີ', 'asdasdas', 'ບ້ານອານຸ', 'asdasdasd');
 
 -- --------------------------------------------------------
 

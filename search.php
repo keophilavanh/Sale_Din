@@ -6,7 +6,7 @@
     
 
     $menu = '
-                <div class="sidebar sidebar-dark bg-dark ">
+                <div class="sidebar sidebar-dark bg-dark toggled">
                     <ul class="list-unstyled">
                 
                     
@@ -32,6 +32,25 @@
                             
                             </ul>
                         </li>
+
+                        <li>
+                            <a href="#price_to" data-toggle="collapse" >
+                                <h4 id="price_to_m_text" > ລາຄາຕໍ່ແມັດ </h4>  <span class="badge badge-success"></span>
+                            </a>
+                            <ul id="price_to" class="list-unstyled collapse">
+                                <li>
+                                    <div class=" col-sm-12  text-light">
+                                       
+                                               
+                                            <input type="number" class="form-control" id="price_to_m"  />
+                                    </div>
+                                </li>
+                                
+                                
+                            
+                            </ul>
+                        </li>
+
                             <div class="col-sm-12 text-light">
                                 <br/>
                                 <button id="btn_search" data-provin="" data-city=""  type="button" class="btn btn-primary  btn-lg form-control"> <i class="fas fa-search fa-lg"></i> ຄົ້ນຫາ </button> <br/><br/>

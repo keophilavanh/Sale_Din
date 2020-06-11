@@ -18,7 +18,14 @@
                 $output.='<li class="nav-item"> <a href="index.php?category='.$row["cat_id"].'" class="navbar-brand" >'.$row["Name_EN"].'</a> </li> ';
                 //$output.='<option value="'.$row["cat_id"].'">'.$row["Name_EN"].'</option>';
             
-              }else{
+              }else if($_SESSION['language'] == 'THAI'){
+
+                $output.='<li class="nav-item"> <a href="index.php?category='.$row["cat_id"].'" class="navbar-brand" >'.$row["Name_THAI"].'</a> </li> ';
+                //$output.='<option value="'.$row["cat_id"].'">'.$row["Name_EN"].'</option>';
+            
+              }
+              
+              else{
                 //$output.='<option value="'.$row["cat_id"].'">'.$row["Name_LA"].'</option>';
                 $output.='<li class="nav-item"> <a href="index.php?category='.$row["cat_id"].'" class="navbar-brand"  >'.$row["Name_LA"].'</a> </li>';
               }

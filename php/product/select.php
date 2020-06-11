@@ -76,16 +76,27 @@ if ($total_count > 0){
     
         $sub_array = array();
         $sub_array[] = $row["id"];
-        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Name_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Name_EN"] ;
-        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Description_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Description_EN"] ;
-        $sub_array[] = 'ພາສາລາວ : <br/>'.$row["Localtion_LA"].' <br/> ພາສາອັງກິດ : <br/>'.$row["Localtion_EN"] ;
+
+        if($_SESSION['language'] == 'EN'){
+  
+            $sub_array[] = $row["Name_EN"];
+            $sub_array[] = $row["Description_EN"];
+            $sub_array[] = $row["Localtion_EN"].' '.$row["City_EN"].' '.$row["Village_EN"];
+     
+         }else{
+
+            $sub_array[] = $row["Name_LA"];
+            $sub_array[] = $row["Description_LA"];
+            $sub_array[] = $row["Localtion_LA"].' '.$row["City_LA"].' '.$row["Village_LA"];
+         }
+
+       
+
+
+
         $sub_array[] = ''.number_format($row["Price_USD"]).' USD <br/>  '.number_format($row["Price_THB"]).' THB <br/> '.number_format($row["Price_KIP"],0).' KIP' ;
       
-        // if($row["status"] == 'Active'){
-        //     $sub_array[] = '<a href="#" id="'.$row["id"].'" class="btn btn-icon btn-pill btn-success " data-toggle="tooltip" >'.$row["status"].'</a>';
-        // }else{
-        //     $sub_array[] = '<a href="#" id="'.$row["id"].'" class="btn btn-icon btn-pill btn-danger " data-toggle="tooltip" > No Active </a>';
-        // }
+       
         
         $sub_array[] = '
                         <a href="edit_product.php?product_id='.$row["id"].'" class="btn btn-pill btn-primary" data-toggle="tooltip" ><i class="fa fa-fw fa-edit"></i> '.$edit_text.' </a> 

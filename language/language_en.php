@@ -60,6 +60,7 @@
       $translate->localtion_add = 'Add Provin';
       $translate->localtion_save = 'Save';
       $translate->localtion_table_name_en = 'Name EN';
+      $translate->category_table_name_thai = 'Name THAI';
 
       $translate->city_titel_card = "City";
       $translate->city_table_code = 'Code';

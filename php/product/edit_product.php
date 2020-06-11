@@ -14,6 +14,14 @@ if(!empty($_POST))
                                         `Description_EN`='".$_POST["Description_EN"]."',
                                         `Localtion_LA`='".$_POST["Localtion_LA"]."',
                                         `Localtion_EN`='".$_POST["Localtion_EN"]."',
+
+                                        `City_LA`='".$_POST["City_LA"]."',
+                                        `City_EN`='".$_POST["City_EN"]."',
+                                        `Village_LA`='".$_POST["Village_LA"]."',
+                                        `Village_EN`='".$_POST["Village_EN"]."',
+
+
+
                                         `cat_id`='".$_POST["cat_id"]."',
                                         `Price_KIP`='".$_POST["Price_KIP"]."',
                                         `Price_THB`='".$_POST["Price_THB"]."',

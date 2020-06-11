@@ -68,6 +68,7 @@ if ($total_count > 0){
         $sub_array[] = $row["cat_id"];
         $sub_array[] = $row["Name_LA"];
         $sub_array[] = $row["Name_EN"];
+        $sub_array[] = $row["Name_THAI"];
       
         if($row["status"] == 'Active'){
             $sub_array[] = '<a href="#" id="'.$row["cat_id"].'" class="btn btn-icon btn-pill btn-success " data-toggle="tooltip" >'.$row["status"].'</a>';
