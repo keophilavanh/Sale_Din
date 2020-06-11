@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 08, 2020 at 05:33 PM
+-- Generation Time: Jun 11, 2020 at 05:00 AM
 -- Server version: 5.7.26
--- PHP Version: 7.3.5
+-- PHP Version: 7.2.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `image` (
   `name` varchar(100) NOT NULL,
   `part` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=37 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `image`
@@ -92,7 +92,8 @@ INSERT INTO `image` (`id`, `pro_id`, `name`, `part`) VALUES
 (32, 148, 'img/1590427737_1.jpg', 'product/'),
 (33, 162, 'img/1591628128_1.jpeg', 'product/'),
 (34, 162, 'img/1591628128_2.jpeg', 'product/'),
-(35, 162, 'img/1591628128_3.jpeg', 'product/');
+(35, 162, 'img/1591628128_3.jpeg', 'product/'),
+(36, 163, 'img/1591802207_1.jpg', 'product/');
 
 -- --------------------------------------------------------
 
@@ -109,15 +110,19 @@ CREATE TABLE IF NOT EXISTS `inbox` (
   `user_id` int(11) NOT NULL,
   `from` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=45 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `inbox`
 --
 
 INSERT INTO `inbox` (`id`, `message`, `phone`, `name`, `user_id`, `from`) VALUES
+(43, 'tset shap', '77452952', 'C shap', 2, NULL),
+(42, 'tset shap', '77452952', 'C shap', 2, NULL),
+(41, 'sdasd', 'setes', 'test', 11, 11),
 (40, 'asdasd', 'asdas', 'asdsad', 11, NULL),
 (39, 'sdfasdsa', '', 'Admin Admin', 11, NULL),
+(44, 'tset shap', '77452952', 'C shap', 2, NULL),
 (38, 'setstets', '', 'Admin Admin', -1, 11);
 
 -- --------------------------------------------------------
@@ -159,29 +164,33 @@ CREATE TABLE IF NOT EXISTS `product` (
   `Price_THB` double NOT NULL,
   `Price_USD` double NOT NULL,
   `view` int(11) NOT NULL,
+  `USD_m` double NOT NULL,
+  `KIP_m` double NOT NULL,
+  `THB_m` double NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=163 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=164 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `product`
 --
 
-INSERT INTO `product` (`id`, `Name_LA`, `Name_EN`, `Description_LA`, `Description_EN`, `Localtion_LA`, `Localtion_EN`, `cat_id`, `user_id`, `Price_KIP`, `Price_THB`, `Price_USD`, `view`) VALUES
-(161, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 85),
-(162, 'asdad', 'asdsad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 55),
-(160, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(159, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(158, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(157, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(156, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(155, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(154, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(153, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(152, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34),
-(151, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(148, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 38),
-(149, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34),
-(150, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34);
+INSERT INTO `product` (`id`, `Name_LA`, `Name_EN`, `Description_LA`, `Description_EN`, `Localtion_LA`, `Localtion_EN`, `cat_id`, `user_id`, `Price_KIP`, `Price_THB`, `Price_USD`, `view`, `USD_m`, `KIP_m`, `THB_m`) VALUES
+(161, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 91, 0, 0, 0),
+(162, 'asdad', 'asdsad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 55, 0, 0, 0),
+(160, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 300, 150000, 2000),
+(159, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(158, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(157, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(156, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(155, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(154, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(153, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(152, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(151, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(148, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 38, 0, 0, 0),
+(149, 'asdad', 'asdsad', 'asdad', 'asdad', 'ແຂວງນະຄອນຫຼວງ', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(150, 'asdad', 'asdsad', 'asdad', 'asdad', 'asdad', 'asdad', 18, 11, 222, 55, 555, 34, 0, 0, 0),
+(163, 'seesef', 'sdfsdfsd', 'sdfsdfsdf', 'sdfsdfsd', 'sdfsdfsdf', 'sdfsdfsdfsd', 18, 11, 150000000, 5200000, 600000, 0, 300, 1500000, 5000);
 
 -- --------------------------------------------------------
 
@@ -260,8 +269,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `name`, `surname`, `address`, `phone`, `username`, `password`, `user_type`, `status`) VALUES
 (3, 'customer', 'customer', 'customer', '77452952', 'customer', '123456', 'Customer', 'No Active'),
-(7, 'Member', 'Member', 'Member', 'Member', 'Member', '123456', 'VIP', 'No Active'),
-(8, 'test', 'test', 'setes', '777777', 'test', 'test', 'Customer', 'No Active'),
+(7, 'Member', 'Member', 'Member', 'Member', 'Member', '123456', 'VIP', 'Active'),
+(8, 'test', 'test', 'setes', '777777', 'test', 'test', 'Customer', 'Active'),
 (9, 'test', 'test', 'setes', '777777', 'test', 'test', 'Customer', 'No Active'),
 (10, 'asdasd', 'asdasd', 'asdasd', 'asdasda', 'fffff', 'fffff', 'Customer', NULL),
 (11, 'Admin', 'Admin', 'Admin', '77452952', 'Admin', '123456', 'Admin', 'Active'),
