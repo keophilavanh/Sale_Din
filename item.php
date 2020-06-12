@@ -166,7 +166,8 @@
                         document.getElementById("titel").innerHTML = data.titel;
                         document.getElementById("localtion").innerHTML = data.localtion;
                         document.getElementById("description").innerHTML = data.description;
-                        document.getElementById("send_inbox").setAttribute('data-vendor', data.vendor);
+                        try { document.getElementById("send_inbox").setAttribute('data-vendor', data.vendor);} catch (error) {}
+                       
                         $('#image_list').html(data.image_list);
                         console.log(data);
 

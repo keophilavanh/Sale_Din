@@ -179,7 +179,7 @@
          product.Localtion_LA LIKE "%'.$_POST["localtion"].'%"
          OR product.Localtion_EN LIKE "%'.$_POST["localtion"].'%" 
          
-         product.City_LA LIKE "%'.$_POST["localtion"].'%"
+         OR product.City_LA LIKE "%'.$_POST["localtion"].'%"
          OR product.City_EN LIKE "%'.$_POST["localtion"].'%" 
          
          ';

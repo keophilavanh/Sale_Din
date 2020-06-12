@@ -96,7 +96,7 @@
           $output = array(
                'price' => $price,
                'titel' =>  $row['Name_EN'],
-               'localtion' => $row['Localtion_EN'],
+               'localtion' => $row['Village_EN'].' '.$row['City_EN'].' '.$row['Localtion_EN'],
                'description' => $row['Description_EN'],
                'image_list' =>  $image_list,
                'vendor' =>  $row['user_id'],
@@ -108,7 +108,7 @@
           $output = array(
                'price' => $price,
                'titel' =>  $row['Name_LA'],
-               'localtion' => $row['Localtion_LA'],
+               'localtion' => $row['Village_LA'].' '.$row['City_LA'].' '.$row['Localtion_LA'],
                'description' => $row['Description_LA'],
                'image_list' =>  $image_list,
                'vendor' =>  $row['user_id'],
