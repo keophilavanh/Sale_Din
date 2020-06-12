@@ -88,6 +88,7 @@
                                         <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price_to_m.'</h5> 
                                         
                                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> '.$row['Localtion_EN'].'</p>
+                                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> '.$row['City_EN'].'</p>
                                     
                                     </div>
                                     
@@ -118,6 +119,7 @@
                                         <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price_to_m.'</h5> 
                                        
                                         <p class="card-text"><i class="fas fa-map-marker-alt"></i> '.$row['Localtion_LA'].'</p>
+                                        <p class="card-text"><i class="fas fa-map-marker-alt"></i> '.$row['City_LA'].'</p>
                                     
                                     </div>
                                     
