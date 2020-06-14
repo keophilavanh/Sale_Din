@@ -102,12 +102,12 @@
         
         console.log(provin_id);
         console.log(provin_text);
-        // document.getElementById("sect_provin").innerHTML = provin_text+' <span class="badge provin_close">X</span>';
-        // document.getElementById("sect_provin").classList.remove("d-none");
+        document.getElementById("sect_provin").innerHTML = provin_text+' <span class="badge provin_close">X</span>';
+        document.getElementById("sect_provin").classList.remove("d-none");
 
-        // document.getElementById("btn_search").setAttribute('data-provin', provin_text);
+        document.getElementById("btn_search").setAttribute('data-provin', provin_text);
 
-        window.location.replace('search_page.php?keyword=&price_min=&price_max=&localtion='+provin_text+'&parent='+provin_id);
+        //window.location.replace('search_page.php?keyword=&price_min=&price_max=&localtion='+provin_text+'&parent='+provin_id);
 
 
         
@@ -150,11 +150,11 @@
         
         console.log(provin_id);
         console.log(provin_text);
-        // document.getElementById("seclt_city").innerHTML = provin_text+' <span class="badge city_close">X</span>';
-        // document.getElementById("seclt_city").classList.remove("d-none");
-        // document.getElementById("btn_search").setAttribute('data-city', provin_text);
+        document.getElementById("seclt_city").innerHTML = provin_text+' <span class="badge city_close">X</span>';
+        document.getElementById("seclt_city").classList.remove("d-none");
+        document.getElementById("btn_search").setAttribute('data-city', provin_text);
 
-        window.location.replace('search_page.php?keyword=&price_min=&price_max=&localtion='+provin_text+'&parent=');
+        //window.location.replace('search_page.php?keyword=&price_min=&price_max=&localtion='+provin_text+'&parent=');
 
         
 
@@ -381,7 +381,7 @@
         console.log( ' keyword',keyword);
         console.log( ' price_min',price_min);
         console.log( ' price_max',price_max);
-        if(keyword == ''&& price_min == '' && price_max == '' && price_to_m == ''){
+        if(keyword == ''&& price_min == '' && price_max == '' && price_to_m == '' && localtion == ''){
             
             msg('ບໍ່ມີຄຳຄົ້ນຫາ','No word for Search');
         }else{

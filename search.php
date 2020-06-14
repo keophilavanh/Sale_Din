@@ -50,13 +50,6 @@
                             
                             </ul>
                         </li>
-
-                            <div class="col-sm-12 text-light">
-                                <br/>
-                                <button id="btn_search" data-provin="" data-city=""  type="button" class="btn btn-primary  btn-lg form-control"> <i class="fas fa-search fa-lg"></i> ຄົ້ນຫາ </button> <br/><br/>
-                            </div>
-                        <li >
-                        </li>
                         <li>
                             <a href="#sm_local" data-toggle="collapse" >
                                 <h4 id="localtion_text" > ພື້ນທີ </h4> 
@@ -74,6 +67,14 @@
                             
                             </ul>
                         </li>
+
+                            <div class="col-sm-12 text-light">
+                                <br/>
+                                <button id="btn_search" data-provin="" data-city=""  type="button" class="btn btn-primary  btn-lg form-control"> <i class="fas fa-search fa-lg"></i> ຄົ້ນຫາ </button> <br/><br/>
+                            </div>
+                        <li >
+                        </li>
+                        
                        
                     
                     </ul>

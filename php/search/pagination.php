@@ -29,7 +29,7 @@
     //     '; 
     // }
 
-    if ($_POST['keyword'] || $_POST["price_min"] > 0 || $_POST["price_max"] > 0 || $_POST["price_to_m"] > 0 ) {
+    if ($_POST['keyword'] || $_POST["price_min"] > 0 || $_POST["price_max"] > 0 || $_POST["price_to_m"] > 0  ) {
 
        
 
@@ -90,6 +90,19 @@
                     
                             }
 
+                            if($_POST["localtion"]){
+
+                                $where .= 'AND ( 
+                                 product.Localtion_LA LIKE "%'.$_POST["localtion"].'%"
+                                 OR product.Localtion_EN LIKE "%'.$_POST["localtion"].'%" 
+                                 
+                                 OR product.City_LA LIKE "%'.$_POST["localtion"].'%"
+                                 OR product.City_EN LIKE "%'.$_POST["localtion"].'%" 
+                                 )
+                                 ';
+                        
+                            }
+
         }else if($_POST["price_min"] > 0 || $_POST["price_max"] > 0)
         
         {
@@ -140,6 +153,19 @@
     
             }
 
+            if($_POST["localtion"]){
+
+                $where .= 'AND ( 
+                 product.Localtion_LA LIKE "%'.$_POST["localtion"].'%"
+                 OR product.Localtion_EN LIKE "%'.$_POST["localtion"].'%" 
+                 
+                 OR product.City_LA LIKE "%'.$_POST["localtion"].'%"
+                 OR product.City_EN LIKE "%'.$_POST["localtion"].'%" 
+                 )
+                 ';
+        
+            }
+
         } else {
 
             if($_POST['currency']=='KIP'){
@@ -167,6 +193,19 @@
                 }
     
     
+            }
+
+            if($_POST["localtion"]){
+
+                $where .= 'AND ( 
+                 product.Localtion_LA LIKE "%'.$_POST["localtion"].'%"
+                 OR product.Localtion_EN LIKE "%'.$_POST["localtion"].'%" 
+                 
+                 OR product.City_LA LIKE "%'.$_POST["localtion"].'%"
+                 OR product.City_EN LIKE "%'.$_POST["localtion"].'%" 
+                 )
+                 ';
+        
             }
         }
        
