@@ -367,7 +367,7 @@
         var price_max = $('#price_max').val();
         var price_to_m = $('#price_to_m').val();
 
-        var localtion;
+        var localtion ='';
         if(provin){
 
             if(city){

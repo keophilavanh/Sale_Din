@@ -238,7 +238,7 @@
 
     $total_pages_sql = "SELECT COUNT(*) FROM product JOIN category ON product.cat_id = category.cat_id $where";
 
-    //echo $total_pages_sql;
+    // $total_pages_sql;
     $sql = "SELECT * FROM product JOIN category ON product.cat_id = category.cat_id $where LIMIT $offset, $no_of_records_per_page";
 
     $result = mysqli_query($connect,$total_pages_sql);
