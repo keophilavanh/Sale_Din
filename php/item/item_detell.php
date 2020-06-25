@@ -84,10 +84,18 @@
 
       if($_POST['currency']=='KIP'){
           $price = number_format($row['Price_KIP']).' KIP';
+
+          $price_m = number_format($row['KIP_m']).' KIP';
+
       }else if($_POST['currency']=='THB'){
           $price = number_format($row['Price_THB']).' THB';
+
+          $price_m = number_format($row['THB_m']).' THB';
+
       }else{
           $price = number_format($row['Price_USD']).' USD';
+
+          $price_m = number_format($row['USD_m']).' USD';
       }
 
 
@@ -95,6 +103,7 @@
   
           $output = array(
                'price' => $price,
+               'price_m' => $price_m,
                'titel' =>  $row['Name_EN'],
                'localtion' => $row['Village_EN'].' '.$row['City_EN'].' '.$row['Localtion_EN'],
                'description' => $row['Description_EN'],
@@ -107,6 +116,7 @@
 
           $output = array(
                'price' => $price,
+               'price_m' => $price_m,
                'titel' =>  $row['Name_LA'],
                'localtion' => $row['Village_LA'].' '.$row['City_LA'].' '.$row['Localtion_LA'],
                'description' => $row['Description_LA'],

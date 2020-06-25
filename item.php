@@ -61,6 +61,7 @@
                             
                             <br/>
                             <h2 id="price">ລາຄາ : 15000000 ໂດລາ </h2><br/>
+                            <h2 id="price_m">ລາຄາຕໍ່ແມັດ : 15000000 ໂດລາ </h2><br/>
 
                             <h2 id="titel">ອາພາດເມັນໃນຕົວເມືອງວຽງຈັນແຫ່ງໃໝ່ (VLC): ພັກອາໄສ, ເຮັດວຽກ ແລະ ທ່ຽວຫຼິ້ນໄດ້ທີ່ ສູນກາງທີ່ຢູ່ອາໄສ </h2><br/>
 
@@ -163,6 +164,7 @@
                     success:function(data){
                    
                         document.getElementById("price").innerHTML = data.price;
+                        document.getElementById("price_m").innerHTML = data.price_m;
                         document.getElementById("titel").innerHTML = data.titel;
                         document.getElementById("localtion").innerHTML = data.localtion;
                         document.getElementById("description").innerHTML = data.description;

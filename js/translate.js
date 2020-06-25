@@ -288,7 +288,7 @@
     }
 
     function change_language() {
-        //console.log('change_language');
+        console.log('change_language');
         var language = localStorage.getItem("language");
         if(language == 'EN' ){
 
@@ -319,15 +319,22 @@
        
       
         }
-        
-        
-        // else{
-        //     localStorage.setItem("language", 'LAO');
-        //     var image = document.getElementById("img_language");
-        //     image.src = "https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png";
-        //     //console.log('LAO')
-        //     load_language();
-        // }
+
+       
+        else{
+            // localStorage.setItem("language", 'LAO');
+            // var image = document.getElementById("img_language");
+            // image.src = "https://f.ptcdn.info/842/045/000/od8z68jkkuXB1zo7A3U-o.png";
+            // console.log('LAO')
+            // load_language();
+
+            localStorage.setItem("language", 'THAI');
+            var image = document.getElementById("img_language");
+            
+            image.src = "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg";
+            //console.log('EN')
+            load_language();
+        }
 
         location.reload();
       }
