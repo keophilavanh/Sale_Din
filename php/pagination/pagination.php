@@ -83,6 +83,7 @@
                                     <div class="ribbon"><span>'.$row['Name_EN'].'</span></div>
                                     <img class="card-img-top" src="'.$image.'" width="150" height="180" alt="Card image cap">
                                     <div class="card-body">
+                                        <p class="card-title"> '.$row[1].'</p> 
                                         <p class="card-title"><i class="fas fa-eye"></i> '.$row['view'].'</p> 
                                         <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price.'</h5>
                                         <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price_to_m.'</h5> 
@@ -114,6 +115,7 @@
                                     <div class="ribbon"><span>'.$row['Name_LA'].'</span></div>
                                     <img class="card-img-top" src="'.$image.'" width="150" height="180" alt="Card image cap">
                                     <div class="card-body">
+                                        <p class="card-title"> '.$row[1].'</p> 
                                         <p class="card-title"><i class="fas fa-eye"></i> '.$row['view'].'</p> 
                                         <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price.'</h5>
                                         <h5 class="card-title"><i class="fas fa-dollar-sign"></i> '.$price_to_m.'</h5> 
