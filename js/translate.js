@@ -568,7 +568,12 @@
 
                 try {document.getElementById("description_titel").innerHTML = language_translate.description;}catch(err) {console.log(err.message);}
               
-
+                try {
+                    document.getElementById("Username").placeholder = language_translate.username;
+                    document.getElementById("Password").placeholder = language_translate.passsword;
+                } catch (error) {
+                    console.log(error.message);
+                }
 
          
 

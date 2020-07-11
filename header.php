@@ -1,6 +1,8 @@
 <?php
  include_once('php/conn.php');
  session_start();
+
+
   
     $query = "SELECT * FROM category WHERE status = 'Active'";  
     $result = mysqli_query($connect, $query);  
@@ -59,9 +61,15 @@ if(isset($_SESSION['token'])){
 }
 
 
+ 
+if(isset($admin)){
+  $admin='class=" mr-3 sidebar-toggle" href="#"';
+}else{
+  $admin='class=" mr-3" href="index.php"';
+}
 
    echo  '<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
-        <a class=" mr-3" href="index.php"><img id="logo" src="http://via.placeholder.com/350x150" alt="Avatar" class="avatar"></a>
+        <a '.$admin.'><img id="logo" src="http://via.placeholder.com/350x150" alt="Avatar" class="avatar"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

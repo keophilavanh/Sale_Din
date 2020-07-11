@@ -137,6 +137,9 @@
     $translate->message_item = "ຂໍ້ຄວາມ";
     $translate->send_inbox = "<i class='fa fa-envelope'></i> ສົ່ງຂໍ້ຄວາມ";
 
+    $translate->username = "ຊື່ຜູ້ໃຊ້";
+    $translate->passsword = "ລະຫັດຜ່ານ";
+
     
 
 

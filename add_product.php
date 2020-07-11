@@ -12,7 +12,13 @@
 
 <body class="bg-light">
 
-<?php include 'header.php';  ?>
+
+<?php 
+$admin='class=" mr-3 sidebar-toggle" href="#"';   
+include 'header.php'; 
+
+?>
+
 
 
 

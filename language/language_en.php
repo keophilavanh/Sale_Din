@@ -147,6 +147,10 @@
     $translate->phone_item = "Phone";
     $translate->message_item = "Message";
     $translate->send_inbox = "<i class='fa fa-envelope'></i> Send";
+
+
+    $translate->username = "Username";
+    $translate->passsword = "Passsword";
     
 
 

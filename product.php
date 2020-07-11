@@ -12,7 +12,13 @@
 
 <body class="bg-light">
 
-<?php include 'header.php';  ?>
+
+<?php 
+$admin='class=" mr-3 sidebar-toggle" href="#"';   
+include 'header.php'; 
+
+?>
+
 
 
     
@@ -66,6 +72,7 @@
             
             var dataTable = $('#example').DataTable({
                 "processing":true,
+                "responsive": true,
                 "serverSide":true,
                 "order":[],
                 "ajax":{
