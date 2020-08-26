@@ -38,10 +38,10 @@
 
     
 
-    $total_pages_sql = "SELECT COUNT(*) FROM product JOIN category ON product.cat_id = category.cat_id  $where";
+    $total_pages_sql = "SELECT COUNT(*) FROM product JOIN category ON product.cat_id = category.cat_id  $where ORDER BY product.id DESC";
 
    
-    $sql = "SELECT * FROM product INNER JOIN category ON product.cat_id = category.cat_id $where LIMIT $offset, $no_of_records_per_page";
+    $sql = "SELECT * FROM product INNER JOIN category ON product.cat_id = category.cat_id $where ORDER BY product.id DESC LIMIT $offset, $no_of_records_per_page";
 
     $result = mysqli_query($connect,$total_pages_sql);
     $total_rows = mysqli_fetch_array($result)[0];
